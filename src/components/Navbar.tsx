@@ -41,7 +41,7 @@ export default function Navbar() {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white shadow-lg text-gray-800' 
-        : 'bg-black/10 backdrop-blur-md text-white'
+        : 'bg-gradient-to-br from-black/60 via-black/40 to-black/20 backdrop-blur-sm text-white'
     }`}>
       {/* Top Bar */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -109,14 +109,44 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo.jpeg"
-                alt="Your Clean Queen Logo"
-                width={180}
-                height={45}
-                className="h-11 w-auto"
-              />
+            <Link href="/" className="flex items-center group">
+              {/* Logo Container with enhanced styling */}
+              <div className={`relative transition-all duration-300 ${
+                isScrolled 
+                  ? 'drop-shadow-sm' 
+                  : 'drop-shadow-md'
+              }`}>
+                <Image
+                  src="/images/logo.png"
+                  alt="Your Clean Queen Logo"
+                  width={48}
+                  height={48}
+                  className={`w-12 h-12 transition-all duration-300 group-hover:scale-105 ${
+                    isScrolled 
+                      ? 'brightness-100' 
+                      : 'brightness-110 contrast-110'
+                  }`}
+                  priority
+                />
+              </div>
+              
+              {/* Optional: Add company name next to logo */}
+              <div className="ml-3 hidden sm:block">
+                <div className={`text-xl font-bold transition-colors ${
+                  isScrolled 
+                    ? 'text-gray-800' 
+                    : 'text-white'
+                }`}>
+                  Your Clean Queen
+                </div>
+                <div className={`text-xs font-medium ${
+                  isScrolled 
+                    ? 'text-vibrant-green' 
+                    : 'text-sage-green'
+                }`}>
+                  Professional Cleaning Services
+                </div>
+              </div>
             </Link>
           </div>
 
