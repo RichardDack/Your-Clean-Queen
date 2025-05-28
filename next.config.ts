@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   
   // Configure for GitHub Pages deployment (update YOUR_USERNAME)
-  basePath: process.env.NODE_ENV === 'production' ? '/Your-Clean-Queen' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Your-Clean-Queen/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization disabled for static export
   images: {
