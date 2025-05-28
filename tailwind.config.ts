@@ -9,27 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Your Clean Queen Brand Colors
-        teal: {
-          DEFAULT: '#008080', // Primary brand teal (matches Teal's name!)
-          light: '#007791',
-          dark: '#006666',
-        },
-        clean: {
-          white: '#FFFFFF',
-          grey: '#F4F4F4',
-          'grey-light': '#E8E8E8',
-        },
-        accent: {
-          silver: '#C0C0C0',
-          gold: '#F0E68C',
-        },
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        'heading': ['Montserrat', 'sans-serif'],
-        'body': ['Open Sans', 'sans-serif'],
       },
     },
   },

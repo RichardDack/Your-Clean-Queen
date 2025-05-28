@@ -1,26 +1,121 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Your Clean Queen Brand Colors */
+@layer utilities {
+  .text-teal {
+    color: #008080;
+  }
+  
+  .text-teal-light {
+    color: #007791;
+  }
+  
+  .text-teal-dark {
+    color: #006666;
+  }
+  
+  .bg-teal {
+    background-color: #008080;
+  }
+  
+  .bg-teal-light {
+    background-color: #007791;
+  }
+  
+  .bg-teal-dark {
+    background-color: #006666;
+  }
+  
+  .bg-clean-white {
+    background-color: #FFFFFF;
+  }
+  
+  .bg-clean-grey {
+    background-color: #F4F4F4;
+  }
+  
+  .bg-clean-grey-light {
+    background-color: #E8E8E8;
+  }
+  
+  .text-accent-gold {
+    color: #F0E68C;
+  }
+  
+  .bg-accent-gold {
+    background-color: #F0E68C;
+  }
+  
+  .border-teal {
+    border-color: #008080;
+  }
+  
+  .border-teal-dark {
+    border-color: #006666;
+  }
+  
+  .hover\:bg-teal:hover {
+    background-color: #008080;
+  }
+  
+  .hover\:bg-teal-dark:hover {
+    background-color: #006666;
+  }
+  
+  .hover\:text-teal:hover {
+    color: #008080;
+  }
+  
+  .hover\:text-accent-gold:hover {
+    color: #F0E68C;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Add only the essential missing utilities */
+  .bg-white\/10 {
+    background-color: rgb(255 255 255 / 0.1);
+  }
+  
+  .bg-white\/5 {
+    background-color: rgb(255 255 255 / 0.05);
+  }
+  
+  .text-white\/90 {
+    color: rgb(255 255 255 / 0.9);
+  }
+  
+  .text-white\/75 {
+    color: rgb(255 255 255 / 0.75);
+  }
+  
+  .border-white\/20 {
+    border-color: rgb(255 255 255 / 0.2);
+  }
+  
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Font utilities */
+@layer utilities {
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-body {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+/* Base styles */
+@layer base {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+  }
 }
