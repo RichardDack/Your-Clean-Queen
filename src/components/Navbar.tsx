@@ -58,7 +58,7 @@ export default function Navbar() {
               }`}
             >
               <PhoneIcon className="w-4 h-4 mr-1.5" />
-              01305 233 872
+              01305 123 456
             </a>
             <a 
               href="mailto:hello@yourcleanqueen.co.uk" 
