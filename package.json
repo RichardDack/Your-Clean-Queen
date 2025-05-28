@@ -1,0 +1,47 @@
+{
+  "name": "your-clean-queen",
+  "version": "0.1.0",
+  "description": "Professional residential cleaning services in Poundbury, Dorchester, Dorset",
+  "private": true,
+  "keywords": [
+    "cleaning",
+    "service", 
+    "poundbury",
+    "dorchester", 
+    "dorset",
+    "residential",
+    "house-cleaning",
+    "home-cleaning"
+  ],
+  "author": "Teal - Your Clean Queen",
+  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/Your-Clean-Queen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/Your-Clean-Queen.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build",
+    "deploy": "npm run export && echo 'Built for GitHub Pages deployment - check /out folder'"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.2",
+    "react-icons": "^5.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "@eslint/eslintrc": "^3"
+  }
+}
