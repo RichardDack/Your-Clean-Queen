@@ -35,7 +35,7 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="contact" className="py-16 bg-gray-50">
+    <section id="contact" className="py-16 bg-gradient-to-r from-vibrant-green to-vibrant-green-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>

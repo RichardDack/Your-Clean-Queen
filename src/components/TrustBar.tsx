@@ -43,7 +43,7 @@ export default function TrustBar() {
   ]
 
   return (
-    <section className="py-12 bg-white border-b border-gray-100">
+    <section className="py-12 bg-[#A8E6CF] border-b border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-heading font-bold text-gray-800 mb-2">

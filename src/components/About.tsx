@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-accent-cream">
+    <section id="about" className="py-16 bg-[#A8E6CF]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 md:order-1">
