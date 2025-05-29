@@ -64,9 +64,14 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-vibrant-green hover:bg-vibrant-green-dark text-white font-semibold py-2.5 md:py-3 px-4 md:px-6 rounded-lg transition-colors duration-300 text-sm md:text-base border-2 border-black">
-                  Learn More
-                </button>
+                {/* <div className="text-center ">
+                  <Link 
+                    href="#contact"
+                    className="w-full bg-vibrant-green hover:bg-vibrant-green-dark text-white font-semibold py-2.5 md:py-3 px-4 md:px-6 rounded-lg transition-colors duration-300 text-sm md:text-base border-2 border-black"
+                  >
+                    Learn More
+                  </Link>
+                </div> */}
               </div>
             </div>
           ))}

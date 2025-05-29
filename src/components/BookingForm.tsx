@@ -1,38 +1,30 @@
 'use client'
-import { useState } from 'react'
+import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function BookingForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    postcode: '',
-    date: '',
-    frequency: '',
-    message: ''
-  })
+  const [state, handleSubmitFormspree] = useForm("myzwrrzb");
+  const [dateError, setDateError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Quote request submitted! We will be in touch shortly.')
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      postcode: '',
-      date: '',
-      frequency: '',
-      message: ''
-    })
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedDate = e.target.value;
+    if (selectedDate) {
+      const dateObj = new Date(selectedDate);
+      // Adjust for timezone offset to prevent day shifting
+      const userTimezoneOffset = dateObj.getTimezoneOffset() * 60000;
+      const correctedDate = new Date(dateObj.getTime() + userTimezoneOffset);
+      
+      const day = correctedDate.getDay(); // 0 for Sunday, 6 for Saturday
+      if (day === 0 || day === 6) {
+        setDateError('Bookings are not available on weekends. Please select a weekday.');
+        e.target.value = ''; // Clear the invalid date
+      } else {
+        setDateError('');
+      }
+    } else {
+      setDateError(''); // Clear error if date is cleared
+    }
+  };
 
   return (
     <section id="contact" className="py-8 md:py-16 bg-gradient-to-r from-vibrant-green to-vibrant-green-dark">
@@ -81,8 +73,20 @@ export default function BookingForm() {
           </div>
           
           <div>
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border-2 border-black">
-              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+            {state.succeeded ? (
+              <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border-2 border-black">
+                <div className="text-center py-10">
+                  <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-800 mb-2">
+                    Thank you!
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base">
+                    Your quote request has been submitted. We will be in touch shortly.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border-2 border-black">
+                <form onSubmit={handleSubmitFormspree} className="space-y-4 md:space-y-6">
                 <div className="text-center mb-6 md:mb-8">
                   <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-800 mb-2">
                     Book your free quote
@@ -93,106 +97,144 @@ export default function BookingForm() {
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Name *</label>
+                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Name *</label>
                   <input
+                    id="name"
                     type="text"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none text-gray-800 bg-white text-sm md:text-base"
                     placeholder="Your name"
                   />
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Email *</label>
+                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Email *</label>
                   <input
+                    id="email"
                     type="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none text-gray-800 bg-white text-sm md:text-base"
                     placeholder="your@email.com"
                   />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Telephone/Mobile *</label>
+                  <label htmlFor="phone" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Telephone/Mobile *</label>
                   <input
+                    id="phone"
                     type="tel"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none text-gray-800 bg-white text-sm md:text-base"
                     placeholder="01305 ..."
                   />
+                  <ValidationError
+                    prefix="Phone"
+                    field="phone"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Postcode *</label>
+                  <label htmlFor="postcode" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Postcode *</label>
                   <input
+                    id="postcode"
                     type="text"
                     name="postcode"
-                    value={formData.postcode}
-                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none text-gray-800 bg-white text-sm md:text-base"
                     placeholder="DT1 1XX"
                   />
+                  <ValidationError
+                    prefix="Postcode"
+                    field="postcode"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Pick a date *</label>
+                  <label htmlFor="date" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Pick a date *</label>
                   <input
+                    id="date"
                     type="date"
                     name="date"
-                    value={formData.date}
-                    onChange={handleChange}
                     required
+                    onChange={handleDateChange}
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none text-gray-800 bg-white text-sm md:text-base"
                   />
+                  <ValidationError
+                    prefix="Date"
+                    field="date"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
+                  {dateError && <p className="text-red-500 text-xs mt-1">{dateError}</p>}
                   <p className="text-gray-500 text-xs mt-1">
-                    Please select a day at least 2 days in advance of today's date.
+                    Please select a day at least 2 days in advance of today's date. Weekends are not available.
                   </p>
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Frequency of cleaning *</label>
+                  <label htmlFor="frequency" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Frequency of cleaning *</label>
                   <select
+                    id="frequency"
                     name="frequency"
-                    value={formData.frequency}
-                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none text-gray-800 bg-white text-sm md:text-base"
                   >
                     <option value="">Please select...</option>
                     <option value="weekly">Weekly</option>
-                    <option value="fortnightly">Fortnightly</option> 
+                    <option value="fortnightly">Fortnightly</option>
                     <option value="monthly">Monthly</option>
                     <option value="oneoff">One-Off Clean</option>
                     <option value="deep-clean">Deep Clean</option>
                     <option value="end-tenancy">End of Tenancy</option>
                     <option value="other">Other</option>
                   </select>
+                  <ValidationError
+                    prefix="Frequency"
+                    field="frequency"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
                 </div>
                 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Additional Information</label>
+                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2 text-sm md:text-base">Additional Information</label>
                   <textarea
+                    id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={3}
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-vibrant-green focus:border-vibrant-green outline-none resize-none text-gray-800 bg-white text-sm md:text-base"
                     placeholder="Tell us about your requirements..."
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
                   />
                 </div>
                 
                 <button
                   type="submit"
+                  disabled={state.submitting}
                   className="w-full bg-vibrant-green hover:bg-vibrant-green-dark text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-xl transition-colors duration-300 text-base md:text-lg shadow-lg border-2 border-black"
                 >
                   Book your free quote now
@@ -204,6 +246,7 @@ export default function BookingForm() {
                 </p>
               </form>
             </div>
+            )} {/* Closes the ternary operator for conditional rendering */}
           </div>
         </div>
       </div>

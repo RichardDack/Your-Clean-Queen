@@ -29,6 +29,7 @@
     "deploy": "npm run export && npx gh-pages -d out"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@heroicons/react": "^2.2.0",
     "next": "15.3.2",
     "react": "^19.0.0",
