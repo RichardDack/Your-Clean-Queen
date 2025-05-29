@@ -1,7 +1,7 @@
 export default function Areas() {
   const areas = [
-    "Dorchester", "Weymouth", "Poundbury", "Portland", "Wareham", 
-    "Blandford Forum", "Swanage", "Shaftesbury", "Sturminster Newton", "Sherborne"
+    "Dorchester", "Weymouth", "Poundbury", "Portland", 
+    "Blandford Forum"
   ]
 
   return (
@@ -24,7 +24,7 @@ export default function Areas() {
         
         <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 max-w-4xl mx-auto border-2 border-white">
           <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 md:mb-6">
-            25km Service Radius from Dorchester
+            15 miles Service Radius from Dorchester
           </h3>
           <p className="text-sm md:text-base lg:text-xl text-white/90 mb-6 md:mb-8">
             Proudly serving homes and businesses across Dorset's most beautiful areas

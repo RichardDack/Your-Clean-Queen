@@ -9,7 +9,7 @@ export default function About() {
           <div className="order-2 md:order-1">
             <div className="relative w-full h-48 md:h-64 lg:h-80 xl:h-96 rounded-lg shadow-xl overflow-hidden">
               <Image
-                src="https://placehold.co/600x450/"
+                src="images/poundbury.jpg"
                 alt="Your Clean Queen professional cleaning team"
                 fill
                 className="object-cover"

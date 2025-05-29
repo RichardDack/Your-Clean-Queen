@@ -73,7 +73,7 @@ export default function BookingForm() {
                 </svg>
                 <div>
                   <div className="text-sm md:text-base lg:text-lg font-bold">Call for immediate booking</div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold">01305 123 456</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold">01305 584616</div>
                 </div>
               </div>
               <p className="text-white/80 text-xs md:text-sm">Available Monday to Friday, 9AM to 6PM</p>
