@@ -1,26 +1,10 @@
 'use client';
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    service: '',
-    comment: ''
-  });
-
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Hero form submitted:', formData);
-    alert('Quote request submitted! We will be in touch shortly.');
-    setFormData({ name: '', phone: '', service: '', comment: '' });
-  };
+  const [state, handleSubmitFormspree] = useForm("myzwrrzb");
 
   const servicesOptions = [
     { value: "", label: "Choose a service" },
@@ -77,18 +61,45 @@ export default function Hero() {
               <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-bold text-white mb-4 md:mb-6 text-center">
                 Get A <span className="drop-shadow-xl" style={{ color: '#00D4AA' }}>Free</span> Quote
               </h3>
-              <form onSubmit={handleFormSubmit} className="space-y-3 md:space-y-4 flex-1">
+              {state.succeeded ? (
+                <div className="text-center py-10 text-white">
+                  <p className="text-lg font-semibold">Thanks for your quote request!</p>
+                  <p className="text-sm">We'll be in touch soon.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmitFormspree} className="space-y-3 md:space-y-4 flex-1">
                 <div>
                   <label htmlFor="hero-name" className="sr-only">Your Name</label>
                   <input
                     type="text"
                     name="name"
                     id="hero-name"
-                    value={formData.name}
-                    onChange={handleFormChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 placeholder-gray-500 bg-white text-sm md:text-base"
                     placeholder="Your Name"
+                  />
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                    className="text-red-400 text-xs"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="hero-email" className="sr-only">Your Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="hero-email"
+                    required
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 placeholder-gray-500 bg-white text-sm md:text-base"
+                    placeholder="Your Email"
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="text-red-400 text-xs"
                   />
                 </div>
                 <div>
@@ -97,11 +108,15 @@ export default function Hero() {
                     type="tel"
                     name="phone"
                     id="hero-phone"
-                    value={formData.phone}
-                    onChange={handleFormChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 placeholder-gray-500 bg-white text-sm md:text-base"
                     placeholder="Mobile Number"
+                  />
+                  <ValidationError
+                    prefix="Phone"
+                    field="phone"
+                    errors={state.errors}
+                    className="text-red-400 text-xs"
                   />
                 </div>
                 <div>
@@ -109,8 +124,6 @@ export default function Hero() {
                   <select
                     name="service"
                     id="hero-service"
-                    value={formData.service}
-                    onChange={handleFormChange}
                     required
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 bg-white text-sm md:text-base"
                   >
@@ -120,26 +133,22 @@ export default function Hero() {
                       </option>
                     ))}
                   </select>
-                </div>
-                <div>
-                  <label htmlFor="hero-comment" className="sr-only">Comment</label>
-                  <textarea
-                    name="comment"
-                    id="hero-comment"
-                    value={formData.comment}
-                    onChange={handleFormChange}
-                    rows={2}
-                    className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 placeholder-gray-500 resize-none bg-white text-sm md:text-base"
-                    placeholder="Any additional details..."
+                  <ValidationError
+                    prefix="Service"
+                    field="service"
+                    errors={state.errors}
+                    className="text-red-400 text-xs"
                   />
                 </div>
                 <button
                   type="submit"
+                  disabled={state.submitting}
                   className="w-full bg-white hover:bg-gray-100 text-vibrant-green font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-lg transition-colors duration-300 text-base md:text-lg shadow-md mt-auto border-2 border-black"
                 >
                   Request Quote
                 </button>
-              </form>
+                </form>
+              )}
             </div>
           </div>
         </div>
