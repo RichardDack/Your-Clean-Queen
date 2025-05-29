@@ -8,7 +8,6 @@ import About from '../components/About'
 import Testimonials from '../components/Testimonials'
 import Areas from '../components/Areas'
 import Footer from '../components/Footer'
-import Feature from '../components/Feature'
 
 // Keep your excellent SEO metadata exactly as is
 export const metadata: Metadata = {
@@ -43,7 +42,6 @@ export default function Home() {
       <Services />
       <BookingForm />
       <About />
-      <Feature />
       <Testimonials />
       <Areas />
       <Footer />
