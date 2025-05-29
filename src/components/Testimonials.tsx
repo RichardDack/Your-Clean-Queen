@@ -24,7 +24,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-8 md:py-16 bg-[#A8E6CF]">
+    <section className="py-8 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
@@ -49,7 +49,7 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-black hover:shadow-xl transition-shadow duration-300">
+            <div key={index} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-black hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="flex mb-3 md:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
@@ -58,11 +58,11 @@ export default function Testimonials() {
                 ))}
               </div>
               
-              <p className="text-gray-700 mb-4 md:mb-6 leading-relaxed italic text-sm md:text-base lg:text-lg">
+              <p className="text-gray-700 mb-4 md:mb-6 leading-relaxed italic text-sm md:text-base lg:text-lg h-24 md:h-28 flex-shrink-0">
                 "{testimonial.text}"
               </p>
               
-              <div className="border-t border-gray-200 pt-3 md:pt-4">
+              <div className="border-t border-gray-200 pt-3 md:pt-4 mt-auto">
                 <div className="font-heading font-bold text-gray-800 text-base md:text-lg">
                   {testimonial.name}
                 </div>
@@ -78,18 +78,12 @@ export default function Testimonials() {
         </div>
         
         <div className="text-center mt-8 md:mt-12">
-          <div className="inline-flex items-center space-x-2 text-gray-600 mb-4 md:mb-6">
+          <div className="inline-flex items-center space-x-2 text-gray-600">
             <svg className="w-4 h-4 md:w-5 md:h-5 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
             </svg>
             <span className="text-xs md:text-sm lg:text-base">Join over 500+ satisfied customers across Dorset</span>
           </div>
-          <a 
-            href="#contact"
-            className="inline-block bg-vibrant-green hover:bg-vibrant-green-dark text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-lg text-sm md:text-base lg:text-lg transition-colors duration-300 shadow-lg border-2 border-black"
-          >
-            Get Your 5-Star Service Today
-          </a>
         </div>
       </div>
     </section>

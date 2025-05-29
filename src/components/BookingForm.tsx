@@ -39,11 +39,11 @@ export default function BookingForm() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
           <div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
-              Ready to book our home cleaning services?
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-white mb-4 md:mb-6">
+              Ready to <span className="drop-shadow-xl text-gray-700" >book</span>  our home cleaning services? 
             </h2>
             
-            <p className="text-sm md:text-base lg:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
+            <p className="text-sm md:text-base lg:text-xl text-white mb-6 md:mb-8 leading-relaxed">
               Contact us to request a free home visit. You can discuss your housekeeping requirements,
               and we will take into account your preferences and the number of rooms you need cleaning.
             </p>
@@ -58,10 +58,10 @@ export default function BookingForm() {
                 'Fully employed trusted teams'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center">
-                  <svg className="w-4 h-4 md:w-5 md:h-5 text-vibrant-green mr-2 md:mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 md:w-5 md:h-5 text-gray-800 mr-2 md:mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
                   </svg>
-                  <span className="text-gray-700 font-medium text-sm md:text-base">{benefit}</span>
+                  <span className="text-white  font-medium text-sm md:text-base">{benefit}</span>
                 </div>
               ))}
             </div>

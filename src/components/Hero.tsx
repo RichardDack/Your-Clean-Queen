@@ -42,7 +42,7 @@ export default function Hero() {
       
       {/* Mobile Background Image */}
       <Image
-        src="https://placehold.co/800x1200/A8E6CF/FFFFFF?text=Clean+Home"
+        src="images/hero-mobile.jpg"
         alt="Clean home background"
         fill
         className="block md:hidden object-cover z-0"
@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-8 lg:gap-16 py-8 md:py-12 lg:py-20">
           <div className="md:w-7/12 flex">
-            <div className="bg-gradient-to-br from-black/40 via-black/25 to-black/10 md:from-black/60 md:via-black/40 md:to-black/20 backdrop-blur-none md:backdrop-blur-sm p-6 md:p-8 rounded-xl flex flex-col justify-center w-full border-2 border-black">
+            <div className="bg-gradient-to-br from-black/80 via-black/45 to-black/40 md:from-black/60 md:via-black/40 md:to-black/20 backdrop-blur-none md:backdrop-blur-sm p-6 md:p-8 rounded-xl flex flex-col justify-center w-full border-2 border-black">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold leading-tight drop-shadow-lg">
                 <span className="drop-shadow-xl" style={{ color: '#00D4AA' }}>Professional cleaning</span>
                 <span className="block text-accent-cream mt-1 sm:mt-2">with a personal touch.</span>
@@ -73,7 +73,7 @@ export default function Hero() {
           </div>
 
           <div className="md:w-5/12 flex">
-            <div className="bg-gradient-to-br from-black/40 via-black/25 to-black/10 md:from-black/60 md:via-black/40 md:to-black/20 backdrop-blur-none md:backdrop-blur-sm p-4 md:p-6 lg:p-8 rounded-xl shadow-2xl w-full flex flex-col border-2 border-black">
+            <div className="bg-gradient-to-br from-black/80 via-black/45 to-black/40 md:from-black/60 md:via-black/40 md:to-black/20 backdrop-blur-none md:backdrop-blur-sm p-4 md:p-6 lg:p-8 rounded-xl shadow-2xl w-full flex flex-col border-2 border-black">
               <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-bold text-white mb-4 md:mb-6 text-center">
                 Get A <span className="drop-shadow-xl" style={{ color: '#00D4AA' }}>Free</span> Quote
               </h3>

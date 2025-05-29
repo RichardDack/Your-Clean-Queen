@@ -6,19 +6,19 @@ export default function Services() {
     {
       title: "Home cleaning",
       description: "Our local house cleaning services will ensure your home is always in immaculate condition, ready for you to relax and enjoy.",
-      image: "https://placehold.co/600x400/00D4AA/FFFFFF?text=Clean+Living+Room",
+      image: "images/living.jpg",
       features: ["Regular weekly/fortnightly cleaning", "Kitchen & bathroom deep clean", "Dusting & vacuuming", "Professional eco-friendly products"]
     },
     {
       title: "Deep cleaning",
       description: "A comprehensive deep clean service that reaches every corner of your home, perfect for spring cleaning or one-off intensive cleaning needs.",
-      image: "https://placehold.co/600x400/00D4AA/FFFFFF?text=Deep+Clean+Service",
+      image: "images/deep.jpg",
       features: ["Complete top-to-bottom clean", "Inside appliances & cupboards", "Detailed bathroom sanitization", "Perfect for spring cleaning"]
     },
     {
       title: "End of tenancy cleaning",
       description: "Professional end of tenancy cleaning to help you get your deposit back. We follow strict checklists to ensure your property meets landlord standards.",
-      image: "https://placehold.co/600x400/00D4AA/FFFFFF?text=End+Tenancy+Clean",
+      image: "images/oven.jpg",
       features: ["Deposit-back guarantee", "Complete property checklist", "Inside oven & appliances", "Professional carpet cleaning available"]
     }
   ]
