@@ -43,7 +43,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800">5.0</span>
-            <span className="text-gray-600 text-xs md:text-sm lg:text-base">Excellent on Trustpilot</span>
+            <span className="text-gray-600 text-xs md:text-sm lg:text-base">Excellent Reviews</span>
           </div>
         </div>
 
@@ -82,7 +82,7 @@ export default function Testimonials() {
             <svg className="w-4 h-4 md:w-5 md:h-5 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
             </svg>
-            <span className="text-xs md:text-sm lg:text-base">Join over 500+ satisfied customers across Dorset</span>
+            <span className="text-xs md:text-sm lg:text-base">Professional cleaners committed to excellence across Dorset</span>
           </div>
         </div>
       </div>

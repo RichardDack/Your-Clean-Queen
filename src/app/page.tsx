@@ -7,29 +7,28 @@ import BookingForm from '../components/BookingForm'
 import About from '../components/About'
 import Testimonials from '../components/Testimonials'
 import Areas from '../components/Areas'
+import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 
-// Keep your excellent SEO metadata exactly as is
+// Enhanced SEO metadata targeting "Cleaners Dorchester" and "Cleaners West Dorset"
 export const metadata: Metadata = {
-  title: "Your Clean Queen - Professional House Cleaning Services | Dorchester, Weymouth, Dorset",
-  description: "Professional house cleaning services in Dorchester, Weymouth, Poundbury & surrounding Dorset areas. Reliable, trustworthy, and with a personal touch. Book your house cleaning today!",
+  title: "Cleaners Dorchester | Professional House Cleaners West Dorset | Your Clean Queen",
+  description: "Professional cleaners in Dorchester and West Dorset. Reliable house cleaners providing weekly cleaning, deep cleans & end of tenancy services. Fully insured cleaners with 5+ years experience serving West Dorset.",
   keywords: [
-    "house cleaning Dorchester",
-    "cleaning services Weymouth",
-    "domestic cleaning Poundbury",
-    "professional cleaners Dorset",
-    "home cleaning Dorchester",
-    "residential cleaning Weymouth",
-    "weekly cleaning Dorchester",
-    "one-off cleaning Weymouth",
-    "deep cleaning Dorset",
-    "reliable house cleaners Dorchester",
-    "trusted cleaning services Weymouth",
-    "Your Clean Queen"
+    "cleaners Dorchester",
+    "cleaners West Dorset",
+    "house cleaners Dorchester", 
+    "professional cleaners West Dorset",
+    "domestic cleaners Dorchester",
+    "reliable cleaners Weymouth",
+    "local cleaners Poundbury",
+    "best cleaners Dorchester",
+    "trusted cleaners West Dorset",
+    "Your Clean Queen cleaners"
   ],
   openGraph: {
-    title: "Your Clean Queen - House Cleaning Dorchester, Weymouth, Dorset",
-    description: "Professional house cleaning with a personal touch across Dorchester, Weymouth, Poundbury and Dorset.",
+    title: "Professional Cleaners Dorchester & West Dorset | Your Clean Queen",
+    description: "Your Clean Queen provides reliable, professional cleaners across Dorchester, West Dorset and surrounding areas. Trusted house cleaners with 5+ years experience.",
   },
 }
 
@@ -44,6 +43,7 @@ export default function Home() {
       <About />
       <Testimonials />
       <Areas />
+      <FAQ />
       <Footer />
     </main>
   )

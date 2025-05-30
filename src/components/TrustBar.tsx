@@ -6,8 +6,8 @@ export default function TrustBar() {
           <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.1V11.1C14.8,12.6 13.4,14.1 12,14.1C10.6,14.1 9.2,12.6 9.2,11.1V10.1C9.2,8.6 10.6,7 12,7Z"/>
         </svg>
       ),
-      title: "Fully Insured",
-      subtitle: "Complete peace of mind with comprehensive insurance coverage",
+      title: "Fully Insured Cleaners",
+      subtitle: "Complete peace of mind with comprehensive insurance coverage for all our cleaners",
       stat: "100% Protected"
     },
     {
@@ -16,8 +16,8 @@ export default function TrustBar() {
           <path d="M9,12L11,14L15,10L13,8L11,10L9,8M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"/>
         </svg>
       ),
-      title: "DBS Checked",
-      subtitle: "All our cleaning professionals are thoroughly vetted",
+      title: "DBS Checked Cleaners",
+      subtitle: "All our professional cleaners are thoroughly vetted and background checked",
       stat: "Trusted Team"
     },
     {
@@ -26,8 +26,8 @@ export default function TrustBar() {
           <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
         </svg>
       ),
-      title: "5 Star Rated",
-      subtitle: "Consistently excellent service rated by our customers",
+      title: "5 Star Rated Cleaners",
+      subtitle: "Consistently excellent cleaning service rated by our West Dorset customers",
       stat: "Excellent Reviews"
     },
     {
@@ -36,8 +36,8 @@ export default function TrustBar() {
           <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
         </svg>
       ),
-      title: "Eco-Friendly",
-      subtitle: "Safe, environmentally conscious cleaning products",
+      title: "Eco-Friendly Cleaners",
+      subtitle: "Our cleaners use safe, environmentally conscious cleaning products",
       stat: "Family Safe"
     }
   ]
@@ -49,10 +49,10 @@ export default function TrustBar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-800 mb-2">
-            Why Choose Your Clean Queen?
+            Why Choose Your Clean Queen Cleaners?
           </h3>
           <p className="text-gray-600 text-sm md:text-base">
-            Professional, reliable, and trustworthy cleaning services across Dorset
+            Professional, reliable, and trustworthy cleaners across Dorchester and West Dorset
           </p>
         </div>
         
@@ -104,7 +104,7 @@ export default function TrustBar() {
         
         <div className="text-center mt-6 md:mt-8">
           <div className="inline-flex items-center space-x-4 text-xs md:text-sm text-gray-600">
-            <span>Serving Dorchester • Weymouth • Poundbury • And surrounding Dorset areas</span>
+            <span>Professional cleaners serving Dorchester • Weymouth • Poundbury • And surrounding West Dorset areas</span>
           </div>
         </div>
       </div>

@@ -7,9 +7,9 @@ export default function Hero() {
   const [state, handleSubmitFormspree] = useForm("myzwrrzb");
 
   const servicesOptions = [
-    { value: "", label: "Choose a service" },
-    { value: "house-cleaning", label: "Home Cleaning" },
-    { value: "deep-cleaning", label: "Deep Cleaning" },
+    { value: "", label: "Choose a cleaning service" },
+    { value: "house-cleaning", label: "Regular House Cleaning" },
+    { value: "deep-cleaning", label: "Deep Cleaning Service" },
     { value: "end-of-tenancy", label: "End of Tenancy Cleaning" },
   ];
 
@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Desktop Background Image */}
       <Image
         src="images/bath.jpg"
-        alt="Sparkling clean home background"
+        alt="Professional cleaners Dorchester - sparkling clean home"
         fill
         className="hidden md:block object-cover z-0"
         priority
@@ -27,7 +27,7 @@ export default function Hero() {
       {/* Mobile Background Image */}
       <Image
         src="images/hero-mobile.jpg"
-        alt="Clean home background"
+        alt="House cleaners West Dorset - clean home background"
         fill
         className="block md:hidden object-cover z-0"
         priority
@@ -40,18 +40,18 @@ export default function Hero() {
           <div className="md:w-7/12 flex">
             <div className="bg-gradient-to-br from-black/80 via-black/45 to-black/40 md:from-black/60 md:via-black/40 md:to-black/20 backdrop-blur-none md:backdrop-blur-sm p-6 md:p-8 rounded-xl flex flex-col justify-center w-full border-2 border-black">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold leading-tight drop-shadow-lg">
-                <span className="drop-shadow-xl" style={{ color: '#00D4AA' }}>Professional cleaning</span>
-                <span className="block text-accent-cream mt-1 sm:mt-2">with a personal touch.</span>
+                <span className="drop-shadow-xl" style={{ color: '#00D4AA' }}>Professional cleaners</span>
+                <span className="block text-accent-cream mt-1 sm:mt-2">in Dorchester & West Dorset.</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-xl mx-auto md:mx-0 drop-shadow-md mb-6 md:mb-8">
-                High-quality residential cleaning for Poundbury, Dorchester, and surrounding Dorset areas.
-                We make your home sparkle!
+                Trusted house cleaners serving Poundbury, Dorchester, Weymouth and surrounding West Dorset areas.
+                Local cleaners with a personal touch!
               </p>
               <Link 
                 href="#services" 
                 className="inline-block bg-white text-vibrant-green hover:bg-gray-100 font-bold px-6 py-2.5 md:px-8 md:py-3 rounded-md text-base md:text-lg transition-colors duration-300 shadow-md mt-4 md:mt-6 w-fit border-2 border-black"
               >
-                Explore Our Services
+                Explore Our Cleaning Services
               </Link>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Hero() {
               {state.succeeded ? (
                 <div className="text-center py-10 text-white">
                   <p className="text-lg font-semibold">Thanks for your quote request!</p>
-                  <p className="text-sm">We'll be in touch soon.</p>
+                  <p className="text-sm">Our cleaners team will be in touch soon.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmitFormspree} className="space-y-3 md:space-y-4 flex-1">
@@ -120,7 +120,7 @@ export default function Hero() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="hero-service" className="sr-only">Choose a service</label>
+                  <label htmlFor="hero-service" className="sr-only">Choose a cleaning service</label>
                   <select
                     name="service"
                     id="hero-service"
@@ -145,7 +145,7 @@ export default function Hero() {
                   disabled={state.submitting}
                   className="w-full bg-white hover:bg-gray-100 text-vibrant-green font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-lg transition-colors duration-300 text-base md:text-lg shadow-md mt-auto border-2 border-black"
                 >
-                  Request Quote
+                  Request Cleaners Quote
                 </button>
                 </form>
               )}
