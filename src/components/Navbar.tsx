@@ -50,7 +50,7 @@ export default function Navbar() {
         }`}>
           <div className="flex items-center space-x-6 text-sm">
             <a 
-              href="tel:01305584616" 
+              href="tel:01305566785" 
               className={`transition-colors flex items-center ${
                 isScrolled 
                   ? 'hover:text-vibrant-green' 
@@ -58,7 +58,7 @@ export default function Navbar() {
               }`}
             >
               <PhoneIcon className="w-4 h-4 mr-1.5" />
-              01305 584616
+              01305 566785
             </a>
             <a 
               href="mailto:hello@yourcleanqueen.co.uk" 

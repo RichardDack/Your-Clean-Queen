@@ -35,7 +35,7 @@ export default function FAQ() {
     },
     {
       question: "How do I book cleaners in Dorchester?",
-      answer: "Booking is easy! Call us on 01305 584616 or fill out our online form for a free quote. We'll arrange a convenient time to visit your property and discuss your cleaning requirements. Our friendly team will tailor a cleaning schedule that works for you."
+      answer: "Booking is easy! Call us on 01305 566785 or fill out our online form for a free quote. We'll arrange a convenient time to visit your property and discuss your cleaning requirements. Our friendly team will tailor a cleaning schedule that works for you."
     },
     {
       question: "Do you provide regular cleaners or one-off cleaning?",
@@ -107,10 +107,10 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <a 
-                href="tel:01305584616"
+                href="tel:01305566785"
                 className="inline-block bg-white text-vibrant-green hover:bg-gray-100 font-bold px-6 py-2.5 md:px-8 md:py-3 rounded-lg text-sm md:text-base transition-colors duration-300 shadow-lg border-2 border-black"
               >
-                Call 01305 584616
+                Call 01305 566785
               </a>
               <a 
                 href="#contact"
