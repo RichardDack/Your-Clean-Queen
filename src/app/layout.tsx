@@ -46,6 +46,18 @@ export const metadata: Metadata = {
   authors: [{ name: "Teal - Your Clean Queen" }],
   creator: "Your Clean Queen",
   publisher: "Your Clean Queen",
+// START: Added Favicon and Manifest Configuration
+  icons: {
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/apple-touch-icon.png',
+    // Note: android-chrome icons are typically referenced via the manifest
+  },
+  manifest: '/site.webmanifest',
+  // END: Added Favicon and Manifest Configuration
   
   // Open Graph for social sharing
   openGraph: {
