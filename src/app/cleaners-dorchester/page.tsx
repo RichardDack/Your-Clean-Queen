@@ -109,7 +109,7 @@ function OtherAreasSection() {
               Serving All of West Dorset
             </h3>
             <p className="text-gray-600 text-sm md:text-base mb-4">
-              Can't find your specific location? We cover a 15-mile radius from Dorchester and serve many more areas across West Dorset.
+              Can&apos;t find your specific location? We cover a 15-mile radius from Dorchester and serve many more areas across West Dorset.
             </p>
             <Link 
               href="/"

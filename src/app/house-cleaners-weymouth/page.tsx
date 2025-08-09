@@ -121,7 +121,7 @@ function NearbyAreasSection() {
               Serving Coastal & Inland Properties
             </h3>
             <p className="text-blue-100 text-sm md:text-base mb-4">
-              From Weymouth's seafront to Dorchester's historic center, we understand the unique cleaning needs of different property types across West Dorset.
+              From Weymouth&apos;s seafront to Dorchester&apos;s historic center, we understand the unique cleaning needs of different property types across West Dorset.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link 

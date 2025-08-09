@@ -74,7 +74,7 @@ export default function FindCleanersSection() {
               Covering All of West Dorset
             </h3>
             <p className="text-gray-600 text-sm md:text-base mb-4">
-              Don't see your specific area? We serve the entire West Dorset region within a 15-mile radius of Dorchester.
+              Don&apos;t see your specific area? We serve the entire West Dorset region within a 15-mile radius of Dorchester.
             </p>
             <Link 
               href="/cleaners-west-dorset"

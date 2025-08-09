@@ -40,7 +40,7 @@ function SpecializedAreasSection() {
   const specializedAreas = [
     {
       title: "Cleaners Dorchester",
-      description: "Our flagship service area with the most experienced team serving Dorchester's historic properties and modern developments.",
+      description: "Our flagship service area with the most experienced team serving Dorchester&apos;s historic properties and modern developments.",
       href: "/cleaners-dorchester",
       icon: "🏛️", 
       highlight: "Main Hub",
