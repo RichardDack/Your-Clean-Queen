@@ -15,18 +15,17 @@
     "home-cleaning"
   ],
   "author": "Teal - Your Clean Queen",
-  "homepage": "https://richarddack.github.io/",
+  "homepage": "https://yourcleanqueen.co.uk",
   "repository": {
     "type": "git",
     "url": "https://github.com/richarddack/Your-Clean-Queen.git"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build --no-lint",
-    "deploy": "npm run export && npx gh-pages -d out"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
