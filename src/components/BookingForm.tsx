@@ -186,7 +186,7 @@ export default function BookingForm() {
                   />
                   {dateError && <p className="text-red-500 text-xs mt-1">{dateError}</p>}
                   <p className="text-gray-500 text-xs mt-1">
-                    Please select a day at least 2 days in advance of today's date. Weekends are not available.
+                    Please select a day at least 2 days in advance of today&apos;s date. Weekends are not available.
                   </p>
                 </div>
                 

@@ -53,7 +53,7 @@ export default function Areas() {
             15 Mile Service Radius from Dorchester
           </h3>
           <p className="text-sm md:text-base lg:text-xl text-white/90 mb-6 md:mb-8">
-            Proudly serving as your local professional cleaners across West Dorset's most beautiful areas. 
+            Proudly serving as your local professional cleaners across West Dorset&apos;s most beautiful areas. 
             All our house cleaners are fully trained, insured, and DBS checked.
           </p>
 

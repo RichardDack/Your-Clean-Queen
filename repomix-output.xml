@@ -70,10 +70,10 @@ src/components/BookingForm.tsx
 src/components/FAQ.tsx
 src/components/Feature.tsx
 src/components/Footer.tsx
+src/components/GoogleReviews.tsx
 src/components/Hero.tsx
 src/components/Navbar.tsx
 src/components/Services.tsx
-src/components/Testimonials.tsx
 src/components/TrustBar.tsx
 tailwind.config.cjs
 tsconfig.json
@@ -83,191 +83,166 @@ vercel.json
 <files>
 This section contains the contents of the repository's files.
 
-<file path="src/app/cleaners-dorchester/page.tsx">
-import { Metadata } from 'next'
-import Navbar from '../../components/Navbar'
-import Hero from '../../components/Hero'
-import TrustBar from '../../components/TrustBar'
-import Services from '../../components/Services'
-import BookingForm from '../../components/BookingForm'
-import About from '../../components/About'
-import Testimonials from '../../components/Testimonials'
-import Footer from '../../components/Footer'
-
-export const metadata: Metadata = {
-  title: "Professional Cleaners Dorchester | House Cleaning Services | Your Clean Queen",
-  description: "Professional cleaners in Dorchester providing reliable house cleaning services. Weekly, fortnightly & one-off cleaning. Fully insured cleaners with 5+ years experience in Dorchester.",
-  keywords: [
-    "cleaners Dorchester",
-    "house cleaners Dorchester", 
-    "professional cleaners Dorchester",
-    "domestic cleaners Dorchester",
-    "reliable cleaners Dorchester",
-    "weekly cleaning Dorchester",
-    "fortnightly cleaning Dorchester",
-    "one-off cleaning Dorchester",
-    "deep cleaning Dorchester",
-    "end of tenancy cleaning Dorchester",
-    "local cleaners Dorchester",
-    "trusted cleaners Dorchester",
-    "insured cleaners Dorchester",
-    "Your Clean Queen Dorchester"
-  ],
-  openGraph: {
-    title: "Professional Cleaners Dorchester | Your Clean Queen",
-    description: "Professional house cleaners in Dorchester. Reliable, insured cleaning services with 5+ years experience. Book your Dorchester cleaning service today.",
-    url: "https://yourcleanqueen.co.uk/cleaners-dorchester",
-  },
-}
-
-export default function CleanersDorchester() {
-  return (
-    <main className="min-h-screen">
-      <Navbar />
-      
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-vibrant-green to-vibrant-green-dark">
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
-          <div className="text-center py-8 md:py-12 lg:py-20">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight text-white mb-6 md:mb-8">
-              Professional <span className="text-accent-cream">Cleaners</span> in Dorchester
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/95 leading-relaxed max-w-4xl mx-auto mb-8 md:mb-12">
-              Your Clean Queen provides reliable, professional house cleaners throughout Dorchester and surrounding areas. 
-              Local cleaners you can trust with over 5 years experience serving the Dorchester community.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto mb-8 md:mb-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">237</div>
-                <div className="text-white/80 text-sm md:text-base">Monthly Searches</div>
-                <div className="text-xs text-white/60 mt-1">For cleaners in Dorchester</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
-                <div className="text-white/80 text-sm md:text-base">Happy Customers</div>
-                <div className="text-xs text-white/60 mt-1">Across Dorchester & West Dorset</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">5+</div>
-                <div className="text-white/80 text-sm md:text-base">Years Experience</div>
-                <div className="text-xs text-white/60 mt-1">Professional Dorchester cleaners</div>
-              </div>
-            </div>
-
-            <a 
-              href="#contact"
-              className="inline-block bg-white text-vibrant-green hover:bg-gray-100 font-bold px-8 py-4 rounded-lg text-lg md:text-xl transition-colors duration-300 shadow-lg border-2 border-black"
-            >
-              Book Dorchester Cleaners Today
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 md:py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
-              Why Choose Our Cleaners in Dorchester?
-            </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-              As local Dorchester residents ourselves, we understand what makes our community special. 
-              Our professional cleaners provide the royal treatment your home deserves.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
-              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
-                </svg>
-              </div>
-              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">Local Dorchester Team</h3>
-              <p className="text-gray-600 text-sm">Born and raised in Dorchester, we know the local area inside out</p>
-            </div>
-
-            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
-              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.1V11.1C14.8,12.6 13.4,14.1 12,14.1C10.6,14.1 9.2,12.6 9.2,11.1V10.1C9.2,8.6 10.6,7 12,7Z"/>
-                </svg>
-              </div>
-              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">Fully Insured & DBS</h3>
-              <p className="text-gray-600 text-sm">Complete peace of mind with full insurance and background checks</p>
-            </div>
-
-            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
-              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
-                </svg>
-              </div>
-              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">5-Star Rated Service</h3>
-              <p className="text-gray-600 text-sm">Consistently excellent results rated by Dorchester customers</p>
-            </div>
-
-            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
-              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
-                </svg>
-              </div>
-              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
-              <p className="text-gray-600 text-sm">Safe for your family, pets, and the Dorchester environment</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <TrustBar />
-      <Services />
-      <BookingForm />
-      <About />
-      <Testimonials />
-      <Footer />
-    </main>
-  )
-}
-</file>
-
-<file path="vercel.json">
-{
-  "headers": [
+<file path="src/components/GoogleReviews.tsx">
+export default function GoogleReviews() {
+  const googleReviews = [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
+      name: "Sharon Taylor",
+      initials: "ST",
+      reviewCount: "11 reviews",
+      rating: 5,
+      timeAgo: "4 weeks ago",
+      text: "So lovely coming home to a clean home. Wouldn&apos;t hesitate to recommend.",
+      location: "Dorchester area" // Inferred
     },
     {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml"
-        }
-      ]
-    }
-  ],
-  "redirects": [
+      name: "Ruth Dyer", 
+      initials: "RD",
+      reviewCount: "2 reviews",
+      rating: 5,
+      timeAgo: "5 weeks ago",
+      text: "I would thoroughly recommend YourCleanQueen for providing a wonderful cleaning service. The professionalism and attention to detail were exceptional.",
+      location: "West Dorset" // Inferred
+    },
     {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
+      name: "Richard",
+      initials: "R",
+      reviewCount: "5 reviews",
+      rating: 5,
+      timeAgo: "9 weeks ago",
+      text: "Such a great find! This cleaner is the whole package: professional in their work, with a wonderfully welcoming and friendly personality. They transformed our house, leaving it absolutely spotless. A huge bonus for us was how dog-friendly they are.",
+      location: "Dorchester area" // Inferred
     }
   ]
+
+  return (
+    <section className="py-8 md:py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-8 md:mb-16">
+          <div className="flex justify-center items-center mb-4 md:mb-6">
+            <svg className="w-8 h-8 md:w-10 md:h-10 mr-3" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-gray-800">
+              Google Reviews
+            </h2>
+          </div>
+          
+          <div className="flex justify-center items-center gap-3 md:gap-4 mb-4 md:mb-6">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                  <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                </svg>
+              ))}
+            </div>
+            <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">5.0</span>
+            <span className="text-gray-600 text-sm md:text-base">Based on Google reviews</span>
+          </div>
+          
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+            Real feedback from our customers across Dorchester and West Dorset
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+          {googleReviews.map((review, index) => (
+            <div key={index} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 flex flex-col">
+              {/* Google Review Header */}
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base mr-3 md:mr-4">
+                  {review.initials}
+                </div>
+                <div className="flex-1">
+                  <div className="font-semibold text-gray-800 text-sm md:text-base">
+                    {review.name}
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-500">
+                    {review.reviewCount}
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="flex items-center mb-1">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {review.timeAgo}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Review Content */}
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base flex-1 mb-4">
+                &ldquo;{review.text}&rdquo;
+              </p>
+              
+              {/* Location Tag */}
+              <div className="text-xs text-vibrant-green font-semibold bg-vibrant-green/10 px-3 py-1 rounded-full inline-block w-fit">
+                {review.location}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Google CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 md:p-8 border-2 border-gray-200 max-w-2xl mx-auto">
+            <div className="flex justify-center items-center mb-4">
+              <svg className="w-6 h-6 md:w-8 md:h-8 mr-2" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+              <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-800">
+                See All Our Google Reviews
+              </h3>
+            </div>
+            
+            <p className="text-gray-600 mb-6 text-sm md:text-base">
+              Read more authentic reviews from our Dorchester and West Dorset customers
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+              <a 
+                href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 shadow-lg"
+              >
+                <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                Read All Reviews
+              </a>
+              <a 
+                href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-vibrant-green hover:bg-vibrant-green-dark text-white font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 shadow-lg border-2 border-black"
+              >
+                ⭐ Leave a Review
+              </a>
+            </div>
+            
+            <p className="text-gray-500 text-xs mt-4">
+              Your honest feedback helps us improve and helps other customers in Dorchester find us
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 </file>
 
@@ -429,51 +404,6 @@ Allow: /
 Crawl-delay: 1
 </file>
 
-<file path="public/sitemap.xml">
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <url>
-    <loc>https://yourcleanqueen.co.uk/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://yourcleanqueen.co.uk/cleaners-dorchester/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://yourcleanqueen.co.uk/domestic-cleaners-dorchester/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://yourcleanqueen.co.uk/house-cleaners-weymouth/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://yourcleanqueen.co.uk/cleaners-west-dorset/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-</urlset>
-</file>
-
 <file path="public/vercel.svg">
 <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 1000"><path d="m577.3 0 577.4 1000H0z" fill="#fff"/></svg>
 </file>
@@ -519,6 +449,153 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</file>
+
+<file path="src/app/cleaners-dorchester/page.tsx">
+import { Metadata } from 'next'
+import Navbar from '../../components/Navbar'
+import TrustBar from '../../components/TrustBar'
+import Services from '../../components/Services'
+import BookingForm from '../../components/BookingForm'
+import About from '../../components/About'
+import Testimonials from '../../components/GoogleReviews'
+import Footer from '../../components/Footer'
+
+export const metadata: Metadata = {
+  title: "Professional Cleaners Dorchester | House Cleaning Services | Your Clean Queen",
+  description: "Professional cleaners in Dorchester providing reliable house cleaning services. Weekly, fortnightly & one-off cleaning. Fully insured cleaners with 5+ years experience in Dorchester.",
+  keywords: [
+    "cleaners Dorchester",
+    "house cleaners Dorchester", 
+    "professional cleaners Dorchester",
+    "domestic cleaners Dorchester",
+    "reliable cleaners Dorchester",
+    "weekly cleaning Dorchester",
+    "fortnightly cleaning Dorchester",
+    "one-off cleaning Dorchester",
+    "deep cleaning Dorchester",
+    "end of tenancy cleaning Dorchester",
+    "local cleaners Dorchester",
+    "trusted cleaners Dorchester",
+    "insured cleaners Dorchester",
+    "Your Clean Queen Dorchester"
+  ],
+  openGraph: {
+    title: "Professional Cleaners Dorchester | Your Clean Queen",
+    description: "Professional house cleaners in Dorchester. Reliable, insured cleaning services with 5+ years experience. Book your Dorchester cleaning service today.",
+    url: "https://yourcleanqueen.co.uk/cleaners-dorchester",
+  },
+}
+
+export default function CleanersDorchester() {
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-vibrant-green to-vibrant-green-dark">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
+          <div className="text-center py-8 md:py-12 lg:py-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight text-white mb-6 md:mb-8">
+              Professional <span className="text-accent-cream">Cleaners</span> in Dorchester
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-white/95 leading-relaxed max-w-4xl mx-auto mb-8 md:mb-12">
+              Your Clean Queen provides reliable, professional house cleaners throughout Dorchester and surrounding areas. 
+              Local cleaners you can trust with over 5 years experience serving the Dorchester community.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto mb-8 md:mb-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">237</div>
+                <div className="text-white/80 text-sm md:text-base">Monthly Searches</div>
+                <div className="text-xs text-white/60 mt-1">For cleaners in Dorchester</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-white/80 text-sm md:text-base">Happy Customers</div>
+                <div className="text-xs text-white/60 mt-1">Across Dorchester & West Dorset</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">5+</div>
+                <div className="text-white/80 text-sm md:text-base">Years Experience</div>
+                <div className="text-xs text-white/60 mt-1">Professional Dorchester cleaners</div>
+              </div>
+            </div>
+
+            <a 
+              href="#contact"
+              className="inline-block bg-white text-vibrant-green hover:bg-gray-100 font-bold px-8 py-4 rounded-lg text-lg md:text-xl transition-colors duration-300 shadow-lg border-2 border-black"
+            >
+              Book Dorchester Cleaners Today
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
+              Why Choose Our Cleaners in Dorchester?
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
+              As local Dorchester residents ourselves, we understand what makes our community special. 
+              Our professional cleaners provide the royal treatment your home deserves.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
+              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">Local Dorchester Team</h3>
+              <p className="text-gray-600 text-sm">Born and raised in Dorchester, we know the local area inside out</p>
+            </div>
+
+            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
+              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.1V11.1C14.8,12.6 13.4,14.1 12,14.1C10.6,14.1 9.2,12.6 9.2,11.1V10.1C9.2,8.6 10.6,7 12,7Z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">Fully Insured & DBS</h3>
+              <p className="text-gray-600 text-sm">Complete peace of mind with full insurance and background checks</p>
+            </div>
+
+            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
+              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">5-Star Rated Service</h3>
+              <p className="text-gray-600 text-sm">Consistently excellent results rated by Dorchester customers</p>
+            </div>
+
+            <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-black">
+              <div className="w-16 h-16 bg-vibrant-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <p className="text-gray-600 text-sm">Safe for your family, pets, and the Dorchester environment</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <TrustBar />
+      <Services />
+      <BookingForm />
+      <About />
+      <Testimonials />
+      <Footer />
+    </main>
+  )
+}
 </file>
 
 <file path="src/app/lib/seo-constants.ts">
@@ -674,14 +751,12 @@ export function generatePageMetadata({
   description,
   keywords = [],
   location,
-  service,
   canonical,
 }: {
   title: string;
   description: string;
   keywords?: string[];
   location?: string;
-  service?: string;
   canonical?: string;
 }): Metadata {
   
@@ -953,22 +1028,44 @@ module.exports = config;
 }
 </file>
 
-<file path="next.config.ts">
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  poweredByHeader: false,
-  
-  experimental: {
-    optimizeCss: true,
-  },
-  
-  images: {
-    formats: ['image/webp', 'image/avif'],
-  },
+<file path="vercel.json">
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
-
-export default nextConfig
 </file>
 
 <file path="postcss.config.mjs">
@@ -978,6 +1075,51 @@ export default {
     autoprefixer: {},
   },
 };
+</file>
+
+<file path="public/sitemap.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://yourcleanqueen.co.uk/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://yourcleanqueen.co.uk/cleaners-dorchester/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://yourcleanqueen.co.uk/domestic-cleaners-dorchester/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://yourcleanqueen.co.uk/house-cleaners-weymouth/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yourcleanqueen.co.uk/cleaners-west-dorset/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
 </file>
 
 <file path="src/components/FAQ.tsx">
@@ -1209,6 +1351,24 @@ export default function Feature() {
     </section>
   );
 }
+</file>
+
+<file path="next.config.ts">
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  
+  experimental: {
+    optimizeCss: true,
+  },
+  
+  images: {
+    formats: ['image/webp', 'image/avif'],
+  },
+}
+
+export default nextConfig
 </file>
 
 <file path="src/app/globals.css">
@@ -2658,7 +2818,7 @@ export const metadata: Metadata = {
   }
 };
 
-// Enhanced Structured Data for Local Business (JSON-LD)
+// Enhanced Structured Data for Local Business (JSON-LD) with Real Google Reviews
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -2739,7 +2899,7 @@ const structuredData = {
     }
   ],
   "priceRange": "££",
-  "telephone": "+44-XXXX-XXXXXX",
+  "telephone": "+44-1305-566785",
   "email": "hello@yourcleanqueen.co.uk",
   "openingHours": "Mo-Fr 08:00-18:00",
   "paymentAccepted": "Cash, Bank Transfer, Card",
@@ -2747,7 +2907,7 @@ const structuredData = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "3",
+    "reviewCount": "10",
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -2756,40 +2916,43 @@ const structuredData = {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "Sarah Mitchell"
+        "name": "Sharon Taylor"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "Your Clean Queen transformed my home! The attention to detail was incredible. The team is fantastic - highly recommend their professional service!"
+      "reviewBody": "So lovely coming home to a clean home. Wouldn't hesitate to recommend.",
+      "datePublished": "2025-07-15"
     },
     {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "James Thompson"
+        "name": "Ruth Dyer"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "Reliable, professional, and friendly service. It's such a relief to come home to a sparkling clean house every fortnight."
+      "reviewBody": "I would thoroughly recommend YourCleanQueen for providing a wonderful cleaning service. The professionalism and attention to detail were exceptional.",
+      "datePublished": "2025-07-08"
     },
     {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "Emily Carter"
+        "name": "Richard"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "The best cleaning service in Poundbury by far. They are thorough, trustworthy, and always leave my home looking and smelling amazing."
+      "reviewBody": "Such a great find! This cleaner is the whole package: professional in their work, with a wonderfully welcoming and friendly personality. They transformed our house, leaving it absolutely spotless. A huge bonus for us was how dog-friendly they are.",
+      "datePublished": "2025-06-12"
     }
   ]
 };
@@ -3120,7 +3283,7 @@ import TrustBar from '../components/TrustBar'
 import Services from '../components/Services'
 import BookingForm from '../components/BookingForm'
 import About from '../components/About'
-import Testimonials from '../components/Testimonials'
+import GoogleReviews from '../components/GoogleReviews'
 import Areas from '../components/Areas'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
@@ -3156,7 +3319,7 @@ export default function Home() {
       <Services />
       <BookingForm />
       <About />
-      <Testimonials />
+      <GoogleReviews />
       <Areas />
       <FAQ />
       <Footer />
@@ -3194,7 +3357,7 @@ export default function About() {
             </div>
             
             <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm md:text-base lg:text-lg">
-              At Your Clean Queen, we're passionate about providing exceptional cleaners for homes across West Dorset. Based in Dorchester, our fully trained, polite, and professional cleaners deliver top-quality housekeeping services throughout the region.
+              At Your Clean Queen, we&apos;re passionate about providing exceptional cleaners for homes across West Dorset. Based in Dorchester, our fully trained, polite, and professional cleaners deliver top-quality housekeeping services throughout the region.
             </p>
             
             <p className="text-gray-700 leading-relaxed mb-6 md:mb-8 text-sm md:text-base lg:text-lg">
@@ -3290,7 +3453,7 @@ export default function Areas() {
             15 Mile Service Radius from Dorchester
           </h3>
           <p className="text-sm md:text-base lg:text-xl text-white/90 mb-6 md:mb-8">
-            Proudly serving as your local professional cleaners across West Dorset's most beautiful areas. 
+            Proudly serving as your local professional cleaners across West Dorset&apos;s most beautiful areas. 
             All our house cleaners are fully trained, insured, and DBS checked.
           </p>
 
@@ -3474,100 +3637,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
-</file>
-
-<file path="src/components/Testimonials.tsx">
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sarah Mitchell",
-      location: "Dorchester",
-      rating: 5,
-      text: "Your Clean Queen transformed my home! The attention to detail was incredible. The team is fantastic - highly recommend their professional service!",
-      service: "Regular Weekly Cleaning"
-    },
-    {
-      name: "James Thompson", 
-      location: "Weymouth",
-      rating: 5,
-      text: "Reliable, professional, and friendly service. It's such a relief to come home to a sparkling clean house every fortnight.",
-      service: "Fortnightly Cleaning"
-    },
-    {
-      name: "Emily Carter",
-      location: "Poundbury", 
-      rating: 5,
-      text: "The best cleaning service in Poundbury by far. They are thorough, trustworthy, and always leave my home looking and smelling amazing.",
-      service: "Deep Clean Service"
-    }
-  ]
-
-  return (
-    <section className="py-8 md:py-16 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
-            Don't just take our word for it
-          </h2>
-          <p className="text-sm md:text-base lg:text-xl text-gray-600 max-w-3xl mx-auto mb-4 md:mb-6">
-            Read what our customers have to say about us...
-          </p>
-          
-          <div className="flex justify-center items-center gap-3 md:gap-4">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-4 h-4 md:w-5 lg:w-6 md:h-5 lg:h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                  <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
-                </svg>
-              ))}
-            </div>
-            <span className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800">5.0</span>
-            <span className="text-gray-600 text-xs md:text-sm lg:text-base">Excellent Reviews</span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-black hover:shadow-xl transition-shadow duration-300 flex flex-col">
-              <div className="flex mb-3 md:mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                    <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
-                  </svg>
-                ))}
-              </div>
-              
-              <p className="text-gray-700 mb-4 md:mb-6 leading-relaxed italic text-sm md:text-base lg:text-lg h-24 md:h-28 flex-shrink-0">
-                "{testimonial.text}"
-              </p>
-              
-              <div className="border-t border-gray-200 pt-3 md:pt-4 mt-auto">
-                <div className="font-heading font-bold text-gray-800 text-base md:text-lg">
-                  {testimonial.name}
-                </div>
-                <div className="text-xs md:text-sm text-gray-600 mb-2">
-                  {testimonial.location}
-                </div>
-                <div className="text-xs text-vibrant-green font-semibold bg-vibrant-green/10 px-2 md:px-3 py-1 rounded-full inline-block">
-                  {testimonial.service}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        <div className="text-center mt-8 md:mt-12">
-          <div className="inline-flex items-center space-x-2 text-gray-600">
-            <svg className="w-4 h-4 md:w-5 md:h-5 text-vibrant-green" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
-            </svg>
-            <span className="text-xs md:text-sm lg:text-base">Professional cleaners committed to excellence across Dorset</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
 }
 </file>
 
@@ -3907,60 +3976,6 @@ export default function Services() {
 }
 </file>
 
-<file path="package.json">
-{
-  "name": "your-clean-queen",
-  "version": "0.1.0",
-  "description": "Professional residential cleaning services in Poundbury, Dorchester, Dorset",
-  "private": true,
-  "type": "module",
-  "keywords": [
-    "cleaning",
-    "service",
-    "poundbury",
-    "dorchester",
-    "dorset",
-    "residential",
-    "house-cleaning",
-    "home-cleaning"
-  ],
-  "author": "Teal - Your Clean Queen",
-  "homepage": "https://yourcleanqueen.co.uk",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/richarddack/Your-Clean-Queen.git"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@formspree/react": "^3.0.0",
-    "@heroicons/react": "^2.2.0",
-    "next": "15.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/tailwindcss": "^3.0.11",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.2",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^3.0.0",
-    "typescript": "^5"
-  }
-}
-</file>
-
 <file path="src/components/BookingForm.tsx">
 'use client'
 import { useState } from 'react';
@@ -4150,7 +4165,7 @@ export default function BookingForm() {
                   />
                   {dateError && <p className="text-red-500 text-xs mt-1">{dateError}</p>}
                   <p className="text-gray-500 text-xs mt-1">
-                    Please select a day at least 2 days in advance of today's date. Weekends are not available.
+                    Please select a day at least 2 days in advance of today&apos;s date. Weekends are not available.
                   </p>
                 </div>
                 
@@ -4216,6 +4231,60 @@ export default function BookingForm() {
       </div>
     </section>
   )
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "your-clean-queen",
+  "version": "0.1.0",
+  "description": "Professional residential cleaning services in Poundbury, Dorchester, Dorset",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "cleaning",
+    "service",
+    "poundbury",
+    "dorchester",
+    "dorset",
+    "residential",
+    "house-cleaning",
+    "home-cleaning"
+  ],
+  "author": "Teal - Your Clean Queen",
+  "homepage": "https://yourcleanqueen.co.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richarddack/Your-Clean-Queen.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "@heroicons/react": "^2.2.0",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/tailwindcss": "^3.0.11",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^5"
+  }
 }
 </file>
 

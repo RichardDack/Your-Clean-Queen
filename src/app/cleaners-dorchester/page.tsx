@@ -1,11 +1,10 @@
 import { Metadata } from 'next'
 import Navbar from '../../components/Navbar'
-import Hero from '../../components/Hero'
 import TrustBar from '../../components/TrustBar'
 import Services from '../../components/Services'
 import BookingForm from '../../components/BookingForm'
 import About from '../../components/About'
-import Testimonials from '../../components/Testimonials'
+import Testimonials from '../../components/GoogleReviews'
 import Footer from '../../components/Footer'
 
 export const metadata: Metadata = {

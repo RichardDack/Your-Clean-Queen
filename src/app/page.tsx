@@ -5,7 +5,7 @@ import TrustBar from '../components/TrustBar'
 import Services from '../components/Services'
 import BookingForm from '../components/BookingForm'
 import About from '../components/About'
-import Testimonials from '../components/Testimonials'
+import GoogleReviews from '../components/GoogleReviews'
 import Areas from '../components/Areas'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
@@ -41,7 +41,7 @@ export default function Home() {
       <Services />
       <BookingForm />
       <About />
-      <Testimonials />
+      <GoogleReviews />
       <Areas />
       <FAQ />
       <Footer />

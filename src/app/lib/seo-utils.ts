@@ -7,14 +7,12 @@ export function generatePageMetadata({
   description,
   keywords = [],
   location,
-  service,
   canonical,
 }: {
   title: string;
   description: string;
   keywords?: string[];
   location?: string;
-  service?: string;
   canonical?: string;
 }): Metadata {
   

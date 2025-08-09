@@ -26,7 +26,7 @@ export default function About() {
             </div>
             
             <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm md:text-base lg:text-lg">
-              At Your Clean Queen, we're passionate about providing exceptional cleaners for homes across West Dorset. Based in Dorchester, our fully trained, polite, and professional cleaners deliver top-quality housekeeping services throughout the region.
+              At Your Clean Queen, we&apos;re passionate about providing exceptional cleaners for homes across West Dorset. Based in Dorchester, our fully trained, polite, and professional cleaners deliver top-quality housekeeping services throughout the region.
             </p>
             
             <p className="text-gray-700 leading-relaxed mb-6 md:mb-8 text-sm md:text-base lg:text-lg">

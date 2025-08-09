@@ -111,7 +111,7 @@ export const metadata: Metadata = {
   }
 };
 
-// Enhanced Structured Data for Local Business (JSON-LD)
+// Enhanced Structured Data for Local Business (JSON-LD) with Real Google Reviews
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -192,7 +192,7 @@ const structuredData = {
     }
   ],
   "priceRange": "££",
-  "telephone": "+44-XXXX-XXXXXX",
+  "telephone": "+44-1305-566785",
   "email": "hello@yourcleanqueen.co.uk",
   "openingHours": "Mo-Fr 08:00-18:00",
   "paymentAccepted": "Cash, Bank Transfer, Card",
@@ -200,7 +200,7 @@ const structuredData = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "3",
+    "reviewCount": "10",
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -209,40 +209,43 @@ const structuredData = {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "Sarah Mitchell"
+        "name": "Sharon Taylor"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "Your Clean Queen transformed my home! The attention to detail was incredible. The team is fantastic - highly recommend their professional service!"
+      "reviewBody": "So lovely coming home to a clean home. Wouldn't hesitate to recommend.",
+      "datePublished": "2025-07-15"
     },
     {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "James Thompson"
+        "name": "Ruth Dyer"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "Reliable, professional, and friendly service. It's such a relief to come home to a sparkling clean house every fortnight."
+      "reviewBody": "I would thoroughly recommend YourCleanQueen for providing a wonderful cleaning service. The professionalism and attention to detail were exceptional.",
+      "datePublished": "2025-07-08"
     },
     {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "Emily Carter"
+        "name": "Richard"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "The best cleaning service in Poundbury by far. They are thorough, trustworthy, and always leave my home looking and smelling amazing."
+      "reviewBody": "Such a great find! This cleaner is the whole package: professional in their work, with a wonderfully welcoming and friendly personality. They transformed our house, leaving it absolutely spotless. A huge bonus for us was how dog-friendly they are.",
+      "datePublished": "2025-06-12"
     }
   ]
 };
