@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// SEO-optimized metadata targeting "Cleaners Dorchester" and "Cleaners West Dorset"
 export const metadata: Metadata = {
   title: {
     default: "Cleaners Dorchester | Professional House Cleaners West Dorset | Your Clean Queen",
@@ -9,35 +8,26 @@ export const metadata: Metadata = {
   },
   description: "Professional cleaners in Dorchester and West Dorset. Reliable house cleaners providing weekly cleaning, deep cleans & end of tenancy services. Fully insured cleaners with 5+ years experience.",
   keywords: [
-    // Primary target keywords
     "cleaners Dorchester",
     "cleaners West Dorset", 
     "house cleaners Dorchester",
     "professional cleaners West Dorset",
     "cleaners near me Dorchester",
-    
-    // Local cleaner variations
     "domestic cleaners Dorchester",
     "home cleaners West Dorset",
     "residential cleaners Dorchester",
     "local cleaners Weymouth",
     "cleaners Poundbury",
-    
-    // Service-specific cleaner terms
     "weekly cleaners Dorchester",
     "deep cleaning cleaners West Dorset",
     "end of tenancy cleaners Dorchester",
     "reliable cleaners Weymouth",
     "best cleaners Dorchester",
-    
-    // Surrounding area cleaners
     "cleaners Winterbourne",
     "cleaners Broadmayne", 
     "cleaners Maiden Newton",
     "cleaners Charminster",
     "cleaners Osmington",
-    
-    // Trust & quality cleaner keywords
     "trusted cleaners Dorchester",
     "insured cleaners West Dorset",
     "DBS checked cleaners Dorchester",
@@ -46,7 +36,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Teal - Your Clean Queen" }],
   creator: "Your Clean Queen",
   publisher: "Your Clean Queen",
-// START: Added Favicon and Manifest Configuration
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' },
@@ -54,12 +43,9 @@ export const metadata: Metadata = {
       { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
     ],
     apple: '/apple-touch-icon.png',
-    // Note: android-chrome icons are typically referenced via the manifest
   },
   manifest: '/site.webmanifest',
-  // END: Added Favicon and Manifest Configuration
   
-  // Open Graph for social sharing
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -77,7 +63,6 @@ export const metadata: Metadata = {
     ]
   },
   
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     title: "Your Clean Queen - Professional Cleaners Dorchester, West Dorset",
@@ -85,7 +70,6 @@ export const metadata: Metadata = {
     images: ["/images/your-clean-queen-og.jpg"]
   },
   
-  // Local business info
   other: {
     "business:contact_data:locality": "Dorchester",
     "business:contact_data:region": "West Dorset, Dorset", 
@@ -93,7 +77,6 @@ export const metadata: Metadata = {
     "business:contact_data:postal_code": "DT1",
   },
   
-  // Additional SEO elements
   robots: {
     index: true,
     follow: true,
@@ -111,146 +94,196 @@ export const metadata: Metadata = {
   }
 };
 
-// Enhanced Structured Data for Local Business (JSON-LD) with Real Google Reviews
-const structuredData = {
+const enhancedStructuredData = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://yourcleanqueen.co.uk",
-  "name": "Your Clean Queen",
-  "alternateName": ["Your Clean Queen Cleaners", "Cleaners Dorchester", "Professional Cleaners West Dorset"],
-  "description": "Professional house cleaners in Dorchester, West Dorset and surrounding areas. Reliable domestic cleaning services with royal treatment standards. Fully insured cleaners with 5+ years experience.",
-  "url": "https://yourcleanqueen.co.uk",
-  "founder": {
-    "@type": "Person",
-    "name": "Teal"
-  },
-  "areaServed": [
+  "@graph": [
     {
-      "@type": "City",
-      "name": "Dorchester",
-      "containedInPlace": {
-        "@type": "AdministrativeArea",
-        "name": "West Dorset"
+      "@type": "LocalBusiness",
+      "@id": "https://yourcleanqueen.co.uk/#business",
+      "name": "Your Clean Queen",
+      "alternateName": ["Your Clean Queen Cleaners", "Professional House Cleaners Dorchester", "Cleaners Dorchester", "House Cleaners West Dorset"],
+      "description": "Professional house cleaning services in Dorchester, West Dorset. Reliable domestic cleaners providing weekly, fortnightly and deep cleaning services. Fully insured with 5+ years experience.",
+      "url": "https://yourcleanqueen.co.uk",
+      "telephone": "+44-1305-566785",
+      "email": "hello@yourcleanqueen.co.uk",
+      "founder": {
+        "@type": "Person",
+        "name": "Teal"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dorchester",
+        "addressRegion": "West Dorset",
+        "addressCountry": "GB",
+        "postalCode": "DT1"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.7312,
+        "longitude": -2.4414
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Dorchester"
+        },
+        {
+          "@type": "City", 
+          "name": "Weymouth"
+        },
+        {
+          "@type": "City",
+          "name": "Poundbury"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Dorset"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates", 
+          "latitude": 50.7312,
+          "longitude": -2.4414
+        },
+        "geoRadius": "15 mi"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "££",
+      "paymentAccepted": ["Cash", "Bank Transfer", "Card"],
+      "currenciesAccepted": "GBP",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "10",
+        "bestRating": "5"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "House Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Regular House Cleaning",
+              "description": "Weekly and fortnightly house cleaning services for homes in Dorchester and West Dorset",
+              "serviceType": "House Cleaning"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Deep Cleaning Service",
+              "description": "Comprehensive deep cleaning for homes in Dorchester and West Dorset",
+              "serviceType": "Deep Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "End of Tenancy Cleaning",
+              "description": "Professional end of tenancy cleaning with deposit-back guarantee",
+              "serviceType": "End of Tenancy Cleaning"
+            }
+          }
+        ]
+      },
+      "additionalType": "https://schema.org/HouseCleaner",
+      "knowsAbout": [
+        "House Cleaning",
+        "Domestic Cleaning", 
+        "Residential Cleaning",
+        "Home Cleaning",
+        "Professional Cleaning"
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sharon Taylor"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "So lovely coming home to a clean home. Wouldn't hesitate to recommend.",
+          "datePublished": "2025-07-15"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Ruth Dyer"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "I would thoroughly recommend YourCleanQueen for providing a wonderful cleaning service. The professionalism and attention to detail were exceptional.",
+          "datePublished": "2025-07-08"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Richard"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Such a great find! This cleaner is the whole package: professional in their work, with a wonderfully welcoming and friendly personality. They transformed our house, leaving it absolutely spotless. A huge bonus for us was how dog-friendly they are.",
+          "datePublished": "2025-06-12"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://yourcleanqueen.co.uk/#organization", 
+      "name": "Your Clean Queen",
+      "url": "https://yourcleanqueen.co.uk",
+      "logo": "https://yourcleanqueen.co.uk/images/logo.png",
+      "sameAs": [
+        "https://facebook.com/yourcleanqueen",
+        "https://twitter.com/yourcleanqueen"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-1305-566785",
+        "contactType": "customer service",
+        "availableLanguage": "English",
+        "areaServed": "GB"
       }
     },
     {
-      "@type": "City", 
-      "name": "Weymouth",
-      "containedInPlace": {
-        "@type": "AdministrativeArea",
-        "name": "West Dorset"
+      "@type": "WebSite",
+      "@id": "https://yourcleanqueen.co.uk/#website",
+      "url": "https://yourcleanqueen.co.uk",
+      "name": "Your Clean Queen - Professional Cleaners Dorchester",
+      "description": "Professional house cleaning services in Dorchester and West Dorset",
+      "publisher": {
+        "@id": "https://yourcleanqueen.co.uk/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://yourcleanqueen.co.uk/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
-    },
-    {
-      "@type": "City",
-      "name": "Poundbury", 
-      "containedInPlace": {
-        "@type": "AdministrativeArea",
-        "name": "West Dorset"
-      }
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "West Dorset"
-    }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Dorchester",
-    "addressRegion": "West Dorset, Dorset",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 50.7312,
-    "longitude": -2.4414
-  },
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates", 
-      "latitude": 50.7312,
-      "longitude": -2.4414
-    },
-    "geoRadius": "15 mi"
-  },
-  "services": [
-    {
-      "@type": "Service",
-      "name": "Regular House Cleaning",
-      "description": "Weekly and fortnightly house cleaning services by professional cleaners"
-    },
-    {
-      "@type": "Service", 
-      "name": "Deep Cleaning Service",
-      "description": "Thorough deep cleaning for homes by experienced cleaners"
-    },
-    {
-      "@type": "Service",
-      "name": "End of Tenancy Cleaning", 
-      "description": "Professional end of tenancy cleaning by qualified cleaners"
-    }
-  ],
-  "priceRange": "££",
-  "telephone": "+44-1305-566785",
-  "email": "hello@yourcleanqueen.co.uk",
-  "openingHours": "Mo-Fr 08:00-18:00",
-  "paymentAccepted": "Cash, Bank Transfer, Card",
-  "currenciesAccepted": "GBP",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "10",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Sharon Taylor"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "reviewBody": "So lovely coming home to a clean home. Wouldn't hesitate to recommend.",
-      "datePublished": "2025-07-15"
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Ruth Dyer"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "reviewBody": "I would thoroughly recommend YourCleanQueen for providing a wonderful cleaning service. The professionalism and attention to detail were exceptional.",
-      "datePublished": "2025-07-08"
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Richard"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "reviewBody": "Such a great find! This cleaner is the whole package: professional in their work, with a wonderfully welcoming and friendly personality. They transformed our house, leaving it absolutely spotless. A huge bonus for us was how dog-friendly they are.",
-      "datePublished": "2025-06-12"
     }
   ]
 };
 
-// FAQ Schema for targeting cleaner-related questions
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -298,15 +331,13 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
-        {/* Structured Data for Local Business SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
+            __html: JSON.stringify(enhancedStructuredData)
           }}
         />
         
-        {/* FAQ Schema for cleaner-related questions */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -314,7 +345,6 @@ export default function RootLayout({
           }}
         />
         
-        {/* Google Fonts for brand typography */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -322,10 +352,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         
-        {/* Canonical URL */}
         <link rel="canonical" href="https://yourcleanqueen.co.uk" />
         
-        {/* Local business specific meta tags */}
         <meta name="geo.region" content="GB-DOR" />
         <meta name="geo.placename" content="Dorchester, West Dorset" />
         <meta name="geo.position" content="50.7312;-2.4414" />

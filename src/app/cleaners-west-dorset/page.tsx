@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Script from 'next/script'
 import Navbar from '../../components/Navbar'
 import TrustBar from '../../components/TrustBar'
 import Services from '../../components/Services'
@@ -35,7 +36,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Specialized Area Services Component
 function SpecializedAreasSection() {
   const specializedAreas = [
     {
@@ -178,8 +178,73 @@ export default function CleanersWestDorset() {
     { name: "Winterbourne", population: "1,500+", specialty: "Village properties" }
   ]
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service", 
+    "name": "Professional Cleaners West Dorset",
+    "description": "Professional house cleaning services across West Dorset including Dorchester, Weymouth, Poundbury and surrounding areas. Regional cleaning coverage with local expertise.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Your Clean Queen",
+      "@id": "https://yourcleanqueen.co.uk/#business"
+    },
+    "serviceType": "House Cleaning Service",
+    "category": "Domestic Cleaning",
+    "additionalType": "https://schema.org/HouseCleaner",
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "West Dorset"
+      },
+      {
+        "@type": "City",
+        "name": "Dorchester",
+        "containedInPlace": {
+          "@type": "AdministrativeArea", 
+          "name": "West Dorset"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Weymouth",
+        "containedInPlace": {
+          "@type": "AdministrativeArea", 
+          "name": "West Dorset"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Poundbury",
+        "containedInPlace": {
+          "@type": "AdministrativeArea", 
+          "name": "West Dorset"
+        }
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "GBP",
+      "priceRange": "££"
+    },
+    "knowsAbout": [
+      "Regional Cleaning Services",
+      "West Dorset Properties",
+      "Historic Property Cleaning",
+      "Coastal Property Cleaning"
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <Script
+        id="cleaners-west-dorset-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
+      
       <Navbar />
       
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-green-600 to-emerald-700">
@@ -275,7 +340,6 @@ export default function CleanersWestDorset() {
             </div>
           </div>
 
-          {/* Service Areas Grid */}
           <div className="mb-12">
             <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-800 mb-8 text-center">
               Our Professional Cleaners Serve These West Dorset Areas:

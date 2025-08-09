@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Script from 'next/script'
 import Navbar from '../../components/Navbar'
 import TrustBar from '../../components/TrustBar'
 import Services from '../../components/Services'
@@ -34,7 +35,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Related Services Component
 function RelatedServicesSection() {
   const relatedServices = [
     {
@@ -141,8 +141,51 @@ function RelatedServicesSection() {
 }
 
 export default function DomesticCleanersDorchester() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service", 
+    "name": "Domestic Cleaners Dorchester",
+    "description": "Professional domestic cleaners in Dorchester providing reliable residential cleaning services. Weekly, fortnightly and one-off domestic cleaning by experienced local cleaners.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Your Clean Queen",
+      "@id": "https://yourcleanqueen.co.uk/#business"
+    },
+    "serviceType": "Domestic Cleaning Service",
+    "category": "Domestic Cleaning",
+    "additionalType": "https://schema.org/HouseCleaner",
+    "areaServed": {
+      "@type": "City",
+      "name": "Dorchester",
+      "containedInPlace": {
+        "@type": "AdministrativeArea", 
+        "name": "West Dorset"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "GBP",
+      "priceRange": "££"
+    },
+    "knowsAbout": [
+      "Domestic Cleaning Dorchester",
+      "Residential Cleaning Services",
+      "Weekly Domestic Cleaning",
+      "House Cleaning Services"
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <Script
+        id="domestic-cleaners-dorchester-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
+      
       <Navbar />
       
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-sage-green to-vibrant-green">

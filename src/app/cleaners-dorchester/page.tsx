@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Script from 'next/script'
 import Navbar from '../../components/Navbar'
 import TrustBar from '../../components/TrustBar'
 import Services from '../../components/Services'
@@ -34,7 +35,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Cross-linking component for other service areas
 function OtherAreasSection() {
   const otherAreas = [
     {
@@ -131,8 +131,51 @@ function OtherAreasSection() {
 }
 
 export default function CleanersDorchester() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service", 
+    "name": "Professional Cleaners Dorchester",
+    "description": "Professional house cleaners in Dorchester providing reliable domestic cleaning services. Weekly, fortnightly and deep cleaning by experienced local cleaners with 5+ years experience.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Your Clean Queen",
+      "@id": "https://yourcleanqueen.co.uk/#business"
+    },
+    "serviceType": "House Cleaning Service",
+    "category": "Domestic Cleaning",
+    "additionalType": "https://schema.org/HouseCleaner",
+    "areaServed": {
+      "@type": "City",
+      "name": "Dorchester",
+      "containedInPlace": {
+        "@type": "AdministrativeArea", 
+        "name": "West Dorset"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "GBP",
+      "priceRange": "££"
+    },
+    "knowsAbout": [
+      "House Cleaning Dorchester",
+      "Domestic Cleaning Dorchester",
+      "Professional Cleaning Services",
+      "Residential Cleaning"
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <Script
+        id="dorchester-cleaners-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
+      
       <Navbar />
       
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-vibrant-green to-vibrant-green-dark">

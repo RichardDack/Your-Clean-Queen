@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Script from 'next/script'
 import Navbar from '../../components/Navbar'
 import TrustBar from '../../components/TrustBar'
 import Services from '../../components/Services'
@@ -35,7 +36,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Nearby Areas Component
 function NearbyAreasSection() {
   const nearbyServices = [
     {
@@ -145,8 +145,51 @@ function NearbyAreasSection() {
 }
 
 export default function HouseCleanersWeymouth() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service", 
+    "name": "House Cleaners Weymouth",
+    "description": "Professional house cleaners in Weymouth providing reliable residential cleaning services. Specialized in coastal properties including holiday homes and B&Bs.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Your Clean Queen",
+      "@id": "https://yourcleanqueen.co.uk/#business"
+    },
+    "serviceType": "House Cleaning Service",
+    "category": "Domestic Cleaning",
+    "additionalType": "https://schema.org/HouseCleaner",
+    "areaServed": {
+      "@type": "City",
+      "name": "Weymouth",
+      "containedInPlace": {
+        "@type": "AdministrativeArea", 
+        "name": "West Dorset"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "GBP",
+      "priceRange": "££"
+    },
+    "knowsAbout": [
+      "House Cleaning Weymouth",
+      "Coastal Property Cleaning",
+      "Holiday Home Cleaning",
+      "Seaside Property Maintenance"
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <Script
+        id="house-cleaners-weymouth-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
+      
       <Navbar />
       
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-blue-500 to-blue-700">
