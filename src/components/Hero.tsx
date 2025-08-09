@@ -140,6 +140,7 @@ export default function Hero() {
                     name="location"
                     id="hero-location"
                     required
+                    defaultValue=""
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 bg-white text-sm md:text-base"
                   >
                     {locationOptions.map(opt => (
@@ -161,6 +162,7 @@ export default function Hero() {
                     name="service"
                     id="hero-service"
                     required
+                    defaultValue=""
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 bg-white text-sm md:text-base"
                   >
                     {servicesOptions.map(opt => (
