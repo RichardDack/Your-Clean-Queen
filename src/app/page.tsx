@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import TrustBar from '../components/TrustBar'
+import FindCleanersSection from '../components/FindCleanersSection'
 import Services from '../components/Services'
 import BookingForm from '../components/BookingForm'
 import About from '../components/About'
@@ -32,12 +33,15 @@ export const metadata: Metadata = {
   },
 }
 
+
+
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
       <TrustBar />
+      <FindCleanersSection />
       <Services />
       <BookingForm />
       <About />

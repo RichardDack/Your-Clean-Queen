@@ -6,6 +6,7 @@ import BookingForm from '../../components/BookingForm'
 import About from '../../components/About'
 import GoogleReviews from '../../components/GoogleReviews'
 import Footer from '../../components/Footer'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Cleaners West Dorset | Professional Cleaning Services | Your Clean Queen",
@@ -32,6 +33,139 @@ export const metadata: Metadata = {
     description: "Professional cleaners across West Dorset. Reliable, insured cleaning services serving Dorchester, Weymouth, Poundbury and surrounding areas.",
     url: "https://yourcleanqueen.co.uk/cleaners-west-dorset",
   },
+}
+
+// Specialized Area Services Component
+function SpecializedAreasSection() {
+  const specializedAreas = [
+    {
+      title: "Cleaners Dorchester",
+      description: "Our flagship service area with the most experienced team serving Dorchester's historic properties and modern developments.",
+      href: "/cleaners-dorchester",
+      icon: "🏛️", 
+      highlight: "Main Hub",
+      stats: "237 monthly searches",
+      features: ["Historic property expertise", "5+ years experience", "Most popular area"]
+    },
+    {
+      title: "Domestic Cleaners Dorchester", 
+      description: "Specialized domestic cleaning services with flexible scheduling tailored for Dorchester residential properties.",
+      href: "/domestic-cleaners-dorchester",
+      icon: "🏠",
+      highlight: "Domestic Focus",
+      stats: "72 monthly searches",
+      features: ["Residential specialists", "Flexible scheduling", "Personalized service"]
+    },
+    {
+      title: "House Cleaners Weymouth",
+      description: "Coastal property specialists experienced with seaside homes, holiday lets, and salt air challenges.",
+      href: "/house-cleaners-weymouth", 
+      icon: "🏖️",
+      highlight: "Coastal Experts",
+      stats: "Seaside specialists",
+      features: ["Holiday home ready", "Salt air expertise", "Sand removal specialists"]
+    }
+  ]
+
+  return (
+    <section className="py-8 md:py-16 bg-gradient-to-r from-green-50 to-emerald-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
+            Specialized Cleaning Services by Area
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+            Your Clean Queen offers location-specific expertise across West Dorset. 
+            Each area has unique needs, and our specialized services reflect our deep local knowledge.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
+          {specializedAreas.map((area, index) => (
+            <Link key={index} href={area.href} className="group">
+              <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 hover:shadow-xl transition-all duration-300 group-hover:scale-105 h-full flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl">{area.icon}</span>
+                  <span className="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                    {area.highlight}
+                  </span>
+                </div>
+                
+                <h3 className="text-lg md:text-xl font-heading font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">
+                  {area.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+                  {area.description}
+                </p>
+                
+                <div className="bg-green-50 p-3 rounded-lg mb-4">
+                  <div className="text-xs font-semibold text-green-700 mb-2">📊 {area.stats}</div>
+                  <ul className="space-y-1">
+                    {area.features.map((feature, idx) => (
+                      <li key={idx} className="text-xs text-gray-700 flex items-center">
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex items-center text-green-600 font-semibold text-sm">
+                  View Specialized Service
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl p-6 md:p-8 max-w-4xl mx-auto">
+            <h3 className="text-lg md:text-xl font-heading font-bold mb-3">
+              Complete West Dorset Coverage
+            </h3>
+            <p className="text-green-100 text-sm md:text-base mb-6">
+              From historic Dorchester to coastal Weymouth, and modern Poundbury to rural villages, 
+              we understand the unique cleaning needs of different West Dorset communities.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-white/20 p-4 rounded-lg">
+                <div className="font-semibold text-sm mb-2">🏛️ Historic Properties</div>
+                <div className="text-xs text-green-100">Specialized care for period features</div>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <div className="font-semibold text-sm mb-2">🏖️ Coastal Homes</div>
+                <div className="text-xs text-green-100">Salt air and sand management</div>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <div className="font-semibold text-sm mb-2">🏘️ Modern Developments</div>
+                <div className="text-xs text-green-100">Contemporary home expertise</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link 
+                href="/"
+                className="inline-block bg-white text-green-600 hover:bg-gray-100 font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 border-2 border-black"
+              >
+                View All Services
+              </Link>
+              <Link 
+                href="#contact"
+                className="inline-block bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300"
+              >
+                Get Regional Quote
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default function CleanersWestDorset() {
@@ -163,6 +297,7 @@ export default function CleanersWestDorset() {
 
       <TrustBar />
       <Services />
+      <SpecializedAreasSection />
       <BookingForm />
       <About />
       <GoogleReviews />

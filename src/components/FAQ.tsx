@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([])
@@ -15,15 +16,26 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Do you have professional cleaners in Dorchester?",
-      answer: "Yes, Your Clean Queen provides professional house cleaners across Dorchester and West Dorset. All our cleaners are fully trained, DBS checked, and committed to delivering excellent residential cleaning. We're locally based in Dorchester and serve the entire West Dorset area."
+      answer: "Yes, Your Clean Queen provides professional house cleaners across Dorchester and West Dorset. All our cleaners are fully trained, DBS checked, and committed to delivering excellent residential cleaning. We're locally based in Dorchester and serve the entire West Dorset area.",
+      links: [
+        { text: "View Dorchester Cleaners", href: "/cleaners-dorchester" },
+        { text: "Domestic Cleaners Dorchester", href: "/domestic-cleaners-dorchester" }
+      ]
     },
     {
       question: "Do you cover West Dorset for cleaning services?",
-      answer: "Absolutely! We provide professional cleaning services throughout West Dorset including Dorchester, Weymouth, Poundbury and surrounding areas within a 15-mile radius. Our local cleaners know the area well and provide reliable service across all of West Dorset."
+      answer: "Absolutely! We provide professional cleaning services throughout West Dorset including Dorchester, Weymouth, Poundbury and surrounding areas within a 15-mile radius. Our local cleaners know the area well and provide reliable service across all of West Dorset.",
+      links: [
+        { text: "View West Dorset Coverage", href: "/cleaners-west-dorset" },
+        { text: "Weymouth House Cleaners", href: "/house-cleaners-weymouth" }
+      ]
     },
     {
       question: "How much do cleaners cost in Dorchester?",
-      answer: "Our cleaning prices are competitive and transparent. We offer free quotes tailored to your specific needs and home size. Prices vary based on the size of your property, frequency of cleaning, and specific requirements. Contact us for a personalized quote from our Dorchester-based team."
+      answer: "Our cleaning prices are competitive and transparent. We offer free quotes tailored to your specific needs and home size. Prices vary based on the size of your property, frequency of cleaning, and specific requirements. Contact us for a personalized quote from our Dorchester-based team.",
+      links: [
+        { text: "Get Dorchester Quote", href: "/cleaners-dorchester#contact" }
+      ]
     },
     {
       question: "Are your cleaners insured and DBS checked?",
@@ -31,11 +43,25 @@ export default function FAQ() {
     },
     {
       question: "What cleaning services do you offer in West Dorset?",
-      answer: "We offer regular weekly/fortnightly house cleaning, one-off deep cleaning, end of tenancy cleaning, and specialized cleaning services. Our professional cleaners use eco-friendly products and provide a comprehensive service tailored to your needs."
+      answer: "We offer regular weekly/fortnightly house cleaning, one-off deep cleaning, end of tenancy cleaning, and specialized cleaning services. Our professional cleaners use eco-friendly products and provide a comprehensive service tailored to your needs.",
+      links: [
+        { text: "View All West Dorset Services", href: "/cleaners-west-dorset" }
+      ]
+    },
+    {
+      question: "Do you provide house cleaners in Weymouth?",
+      answer: "Yes! We provide professional house cleaners throughout Weymouth and surrounding coastal areas. Our Weymouth cleaners are experienced with seaside properties and understand the unique cleaning challenges of coastal homes, including sand removal and salt air effects.",
+      links: [
+        { text: "Weymouth House Cleaners", href: "/house-cleaners-weymouth" }
+      ]
     },
     {
       question: "How do I book cleaners in Dorchester?",
-      answer: "Booking is easy! Call us on 01305 566785 or fill out our online form for a free quote. We'll arrange a convenient time to visit your property and discuss your cleaning requirements. Our friendly team will tailor a cleaning schedule that works for you."
+      answer: "Booking is easy! Call us on 01305 566785 or fill out our online form for a free quote. We'll arrange a convenient time to visit your property and discuss your cleaning requirements. Our friendly team will tailor a cleaning schedule that works for you.",
+      links: [
+        { text: "Book Dorchester Cleaners", href: "/cleaners-dorchester#contact" },
+        { text: "Book Domestic Cleaners", href: "/domestic-cleaners-dorchester#contact" }
+      ]
     },
     {
       question: "Do you provide regular cleaners or one-off cleaning?",
@@ -87,14 +113,77 @@ export default function FAQ() {
               {openItems.includes(index) && (
                 <div className="px-4 pb-4 md:px-6 md:pb-6">
                   <div className="border-t border-gray-200 pt-4">
-                    <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
                       {faq.answer}
                     </p>
+                    
+                    {faq.links && faq.links.length > 0 && (
+                      <div className="flex flex-wrap gap-2 md:gap-3">
+                        {faq.links.map((link, linkIndex) => (
+                          <Link
+                            key={linkIndex}
+                            href={link.href}
+                            className="inline-flex items-center bg-vibrant-green hover:bg-vibrant-green-dark text-white text-xs md:text-sm font-semibold px-3 py-1.5 md:px-4 md:py-2 rounded-lg transition-colors duration-300 border border-black"
+                          >
+                            {link.text}
+                            <svg className="w-3 h-3 md:w-4 md:h-4 ml-1.5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
             </div>
           ))}
+        </div>
+
+        {/* Area-specific FAQ links section */}
+        <div className="mt-12 md:mt-16">
+          <div className="bg-white rounded-xl border-2 border-vibrant-green p-6 md:p-8">
+            <h3 className="text-lg md:text-xl font-heading font-bold text-gray-800 mb-4 text-center">
+              Looking for Area-Specific Information?
+            </h3>
+            <p className="text-gray-600 text-sm md:text-base text-center mb-6">
+              Get detailed information about our cleaning services in your specific West Dorset location.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/cleaners-dorchester" className="group text-center p-4 bg-vibrant-green/5 rounded-lg hover:bg-vibrant-green/10 transition-colors">
+                <div className="text-lg font-bold text-gray-800 group-hover:text-vibrant-green transition-colors">🏛️</div>
+                <div className="text-sm font-semibold text-gray-800 group-hover:text-vibrant-green transition-colors">
+                  Dorchester Cleaners
+                </div>
+                <div className="text-xs text-gray-600">237 monthly searches</div>
+              </Link>
+              
+              <Link href="/domestic-cleaners-dorchester" className="group text-center p-4 bg-sage-green/5 rounded-lg hover:bg-sage-green/10 transition-colors">
+                <div className="text-lg font-bold text-gray-800 group-hover:text-vibrant-green transition-colors">🏠</div>
+                <div className="text-sm font-semibold text-gray-800 group-hover:text-vibrant-green transition-colors">
+                  Domestic Cleaners
+                </div>
+                <div className="text-xs text-gray-600">Residential focus</div>
+              </Link>
+              
+              <Link href="/house-cleaners-weymouth" className="group text-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                <div className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors">🏖️</div>
+                <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                  Weymouth Cleaners
+                </div>
+                <div className="text-xs text-gray-600">Coastal specialists</div>
+              </Link>
+              
+              <Link href="/cleaners-west-dorset" className="group text-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                <div className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors">🌍</div>
+                <div className="text-sm font-semibold text-gray-800 group-hover:text-green-600 transition-colors">
+                  West Dorset Coverage
+                </div>
+                <div className="text-xs text-gray-600">Regional service</div>
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="text-center mt-8 md:mt-12">

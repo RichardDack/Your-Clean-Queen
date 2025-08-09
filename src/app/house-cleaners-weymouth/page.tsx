@@ -6,6 +6,7 @@ import BookingForm from '../../components/BookingForm'
 import About from '../../components/About'
 import GoogleReviews from '../../components/GoogleReviews'
 import Footer from '../../components/Footer'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "House Cleaners Weymouth | Professional Cleaning Services | Your Clean Queen",
@@ -32,6 +33,115 @@ export const metadata: Metadata = {
     description: "Professional house cleaners in Weymouth. Reliable, insured residential cleaning services. Book your house cleaning service today.",
     url: "https://yourcleanqueen.co.uk/house-cleaners-weymouth",
   },
+}
+
+// Nearby Areas Component
+function NearbyAreasSection() {
+  const nearbyServices = [
+    {
+      title: "Cleaners Dorchester",
+      description: "Our main service hub with the most experienced team and 237 monthly searches for professional cleaners.",
+      href: "/cleaners-dorchester",
+      icon: "🏛️", 
+      highlight: "Main Hub",
+      distance: "8 miles from Weymouth",
+      benefit: "Most popular service area"
+    },
+    {
+      title: "Domestic Cleaners Dorchester", 
+      description: "Specialized domestic cleaning with flexible scheduling for residential properties.",
+      href: "/domestic-cleaners-dorchester",
+      icon: "🏠",
+      highlight: "Domestic Focus",
+      distance: "8 miles from Weymouth",
+      benefit: "Residential specialists"
+    },
+    {
+      title: "Regional West Dorset Services",
+      description: "Complete coverage across West Dorset including coastal and inland properties.",
+      href: "/cleaners-west-dorset", 
+      icon: "🌍",
+      highlight: "Full Coverage",
+      distance: "Covers Weymouth area",
+      benefit: "Regional expertise"
+    }
+  ]
+
+  return (
+    <section className="py-8 md:py-16 bg-blue-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-800 mb-4 md:mb-6">
+            Professional Cleaners in Nearby Areas
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+            Your Clean Queen serves the entire West Dorset region from our Dorchester base. 
+            Explore our specialized cleaning services in nearby areas.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
+          {nearbyServices.map((service, index) => (
+            <Link key={index} href={service.href} className="group">
+              <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 group-hover:scale-105 h-full flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl">{service.icon}</span>
+                  <span className="text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                    {service.highlight}
+                  </span>
+                </div>
+                
+                <h3 className="text-lg md:text-xl font-heading font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm leading-relaxed mb-3 flex-1">
+                  {service.description}
+                </p>
+                
+                <div className="bg-blue-50 p-3 rounded-lg mb-3">
+                  <div className="text-xs font-semibold text-blue-700 mb-1">📍 {service.distance}</div>
+                  <div className="text-xs text-gray-700">✓ {service.benefit}</div>
+                </div>
+                
+                <div className="flex items-center text-blue-600 font-semibold text-sm">
+                  View Area Details
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl p-6 md:p-8 max-w-2xl mx-auto">
+            <h3 className="text-lg md:text-xl font-heading font-bold mb-3">
+              Serving Coastal & Inland Properties
+            </h3>
+            <p className="text-blue-100 text-sm md:text-base mb-4">
+              From Weymouth's seafront to Dorchester's historic center, we understand the unique cleaning needs of different property types across West Dorset.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link 
+                href="/"
+                className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 border-2 border-black"
+              >
+                View All Services
+              </Link>
+              <Link 
+                href="#contact"
+                className="inline-block bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300"
+              >
+                Get Quote for Weymouth
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default function HouseCleanersWeymouth() {
@@ -136,6 +246,7 @@ export default function HouseCleanersWeymouth() {
 
       <TrustBar />
       <Services />
+      <NearbyAreasSection />
       <BookingForm />
       <About />
       <GoogleReviews />

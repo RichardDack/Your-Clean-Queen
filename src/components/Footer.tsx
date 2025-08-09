@@ -1,13 +1,28 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+
+  const serviceAreas = [
+    { name: "Cleaners Dorchester", href: "/cleaners-dorchester", highlight: "Most Popular" },
+    { name: "Domestic Cleaners Dorchester", href: "/domestic-cleaners-dorchester", highlight: "Residential Focus" },
+    { name: "House Cleaners Weymouth", href: "/house-cleaners-weymouth", highlight: "Coastal Experts" },
+    { name: "Cleaners West Dorset", href: "/cleaners-west-dorset", highlight: "Regional Coverage" }
+  ]
+
+  const services = [
+    { name: "Home Cleaning", href: "#services" },
+    { name: "Deep Cleaning", href: "#services" },
+    { name: "End of Tenancy", href: "#services" },
+    { name: "Free Quotes", href: "#contact" }
+  ]
 
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 border-b border-gray-700 pb-8 md:pb-12">
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4 md:mb-6">
               <Image
                 src="/images/logo.png"
@@ -19,8 +34,8 @@ export default function Footer() {
               <span className="text-lg md:text-xl font-bold">Your Clean Queen</span>
             </div>
             
-            <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed max-w-md text-sm md:text-base">
-              Professional house cleaning services for homes across Dorchester, Weymouth, and Dorset. 
+            <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
+              Professional house cleaning services for homes across Dorchester, Weymouth, and West Dorset. 
               We make your home sparkle with our personal touch!
             </p>
             
@@ -43,11 +58,37 @@ export default function Footer() {
           <div>
             <h4 className="text-base md:text-lg font-heading font-semibold mb-4 md:mb-6 text-white">Our Services</h4>
             <ul className="space-y-2 md:space-y-3 text-gray-300">
-              <li><a href="#services" className="hover:text-white transition-colors text-sm md:text-base">Home Cleaning</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors text-sm md:text-base">Deep Cleaning</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors text-sm md:text-base">End of Tenancy</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors text-sm md:text-base">Free Quotes</a></li>
+              {services.map((service, index) => (
+                <li key={index}>
+                  <a href={service.href} className="hover:text-white transition-colors text-sm md:text-base">
+                    {service.name}
+                  </a>
+                </li>
+              ))}
             </ul>
+          </div>
+
+          <div>
+            <h4 className="text-base md:text-lg font-heading font-semibold mb-4 md:mb-6 text-white">Service Areas</h4>
+            <ul className="space-y-2 md:space-y-3 text-gray-300">
+              {serviceAreas.map((area, index) => (
+                <li key={index}>
+                  <Link href={area.href} className="hover:text-white transition-colors text-sm md:text-base group">
+                    <div className="flex items-center justify-between">
+                      <span>{area.name}</span>
+                      <span className="text-xs bg-vibrant-green px-2 py-0.5 rounded text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        {area.highlight}
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            
+            <div className="mt-4 pt-4 border-t border-gray-700">
+              <p className="text-xs text-gray-400 mb-2">Also serving:</p>
+              <p className="text-xs text-gray-500">Portland • Poundbury • Blandford Forum • Winterbourne • Broadmayne • And surrounding West Dorset areas</p>
+            </div>
           </div>
           
           <div>
@@ -83,6 +124,29 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        {/* Additional navigation section */}
+        <div className="py-6 border-b border-gray-700">
+          <div className="text-center">
+            <h5 className="text-sm md:text-base font-heading font-semibold text-white mb-4">
+              Find Professional Cleaners Near You
+            </h5>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+              <Link href="/cleaners-dorchester" className="bg-gray-700 hover:bg-vibrant-green text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md text-xs md:text-sm transition-colors">
+                Dorchester Cleaners
+              </Link>
+              <Link href="/domestic-cleaners-dorchester" className="bg-gray-700 hover:bg-sage-green text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md text-xs md:text-sm transition-colors">
+                Domestic Cleaners
+              </Link>
+              <Link href="/house-cleaners-weymouth" className="bg-gray-700 hover:bg-blue-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md text-xs md:text-sm transition-colors">
+                Weymouth Cleaners
+              </Link>
+              <Link href="/cleaners-west-dorset" className="bg-gray-700 hover:bg-green-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md text-xs md:text-sm transition-colors">
+                West Dorset Coverage
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
       
       <div className="border-t border-gray-700 bg-gray-900">
@@ -100,7 +164,12 @@ export default function Footer() {
           
           <div className="text-center mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-800">
             <p className="text-gray-500 text-xs">
-              Serving Dorchester • Weymouth • Poundbury • And surrounding Dorset areas within 25km radius
+              Professional Cleaners Serving: 
+              <Link href="/cleaners-dorchester" className="hover:text-vibrant-green transition-colors ml-1">Dorchester</Link> • 
+              <Link href="/house-cleaners-weymouth" className="hover:text-blue-400 transition-colors ml-1">Weymouth</Link> • 
+              <Link href="/domestic-cleaners-dorchester" className="hover:text-sage-green transition-colors ml-1">Poundbury</Link> • 
+              <Link href="/cleaners-west-dorset" className="hover:text-green-400 transition-colors ml-1">West Dorset Areas</Link> - 
+              <span className="ml-1">Within 15km radius</span>
             </p>
           </div>
         </div>

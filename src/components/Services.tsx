@@ -23,6 +23,28 @@ export default function Services() {
     }
   ]
 
+  // Area-specific service links
+  const areaServices = [
+    {
+      area: "Dorchester",
+      href: "/cleaners-dorchester",
+      highlight: "Most Popular",
+      description: "Our flagship service area with 5+ years experience"
+    },
+    {
+      area: "Weymouth", 
+      href: "/house-cleaners-weymouth",
+      highlight: "Coastal Experts",
+      description: "Specialized service for seaside properties"
+    },
+    {
+      area: "West Dorset",
+      href: "/cleaners-west-dorset",
+      highlight: "Full Coverage",
+      description: "Complete regional cleaning solutions"
+    }
+  ]
+
   return (
     <section id="services" className="py-8 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -67,6 +89,61 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Area-Specific Services Section */}
+        <div className="mt-12 md:mt-16">
+          <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-bold text-gray-800 mb-4">
+              Find Professional Cleaners in Your Specific Area
+            </h3>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Our cleaning services are tailored to the unique needs of different West Dorset communities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
+            {areaServices.map((area, index) => (
+              <Link key={index} href={area.href} className="group">
+                <div className="bg-gradient-to-br from-vibrant-green/5 to-vibrant-green/10 rounded-xl p-6 border-2 border-vibrant-green/20 hover:border-vibrant-green hover:shadow-lg transition-all duration-300 group-hover:scale-105 text-center">
+                  <div className="mb-4">
+                    <span className="inline-block bg-vibrant-green text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                      {area.highlight}
+                    </span>
+                    <h4 className="text-lg md:text-xl font-heading font-bold text-gray-800 group-hover:text-vibrant-green transition-colors">
+                      Cleaners {area.area}
+                    </h4>
+                  </div>
+                  
+                  <p className="text-gray-600 text-sm mb-4">
+                    {area.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-center text-vibrant-green font-semibold text-sm">
+                    View {area.area} Services
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center bg-gray-50 rounded-xl p-6 md:p-8 border-2 border-gray-200">
+            <h4 className="text-lg md:text-xl font-heading font-bold text-gray-800 mb-3">
+              Need Specialized Domestic Cleaning?
+            </h4>
+            <p className="text-gray-600 text-sm md:text-base mb-4">
+              Looking for dedicated domestic cleaning services in Dorchester? Our domestic cleaners offer personalized residential cleaning with flexible scheduling.
+            </p>
+            <Link 
+              href="/domestic-cleaners-dorchester"
+              className="inline-block bg-sage-green hover:bg-sage-green-dark text-white font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 border-2 border-black"
+            >
+              View Domestic Cleaners
+            </Link>
+          </div>
         </div>
 
         <div className="text-center mt-8 md:mt-12">
