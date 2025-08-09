@@ -126,7 +126,7 @@ export default function GoogleReviews() {
             
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <a 
-                href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review" 
+                href="https://g.page/r/16070491715689713878/review" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 shadow-lg"
@@ -140,7 +140,7 @@ export default function GoogleReviews() {
                 Read All Reviews
               </a>
               <a 
-                href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review" 
+                href="https://g.page/r/16070491715689713878/review" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-vibrant-green hover:bg-vibrant-green-dark text-white font-bold px-6 py-3 rounded-lg text-sm md:text-base transition-colors duration-300 shadow-lg border-2 border-black"
