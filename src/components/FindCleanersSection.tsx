@@ -6,21 +6,21 @@ export default function FindCleanersSection() {
       title: "Cleaners Dorchester",
       description: "Professional house cleaners serving Dorchester and surrounding areas with 5+ years experience.",
       href: "/cleaners-dorchester",
-      searches: "237 monthly searches",
+      benefit: "5+ Years Experience",
       highlight: "Most Popular"
     },
     {
       title: "Domestic Cleaners Dorchester", 
       description: "Specialized domestic cleaning services for Dorchester homes with flexible scheduling.",
       href: "/domestic-cleaners-dorchester",
-      searches: "72 monthly searches",
+      benefit: "Flexible Scheduling",
       highlight: "Domestic Focus"
     },
     {
       title: "House Cleaners Weymouth",
       description: "Expert house cleaning services for Weymouth coastal properties and holiday homes.",
       href: "/house-cleaners-weymouth", 
-      searches: "Coastal Specialists",
+      benefit: "Holiday Home Ready",
       highlight: "Seaside Experts"
     }
   ]
@@ -46,7 +46,7 @@ export default function FindCleanersSection() {
                   <span className="text-xs font-semibold bg-vibrant-green text-white px-3 py-1 rounded-full">
                     {area.highlight}
                   </span>
-                  <span className="text-xs text-gray-500">{area.searches}</span>
+                  <span className="text-xs text-gray-500">{area.benefit}</span>
                 </div>
                 
                 <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-800 mb-3 group-hover:text-vibrant-green transition-colors">
