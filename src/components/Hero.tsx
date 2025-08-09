@@ -13,6 +13,21 @@ export default function Hero() {
     { value: "end-of-tenancy", label: "End of Tenancy Cleaning" },
   ];
 
+  const locationOptions = [
+    { value: "", label: "Select your area" },
+    { value: "dorchester", label: "Dorchester" },
+    { value: "weymouth", label: "Weymouth" },
+    { value: "poundbury", label: "Poundbury" },
+    { value: "portland", label: "Portland" },
+    { value: "blandford-forum", label: "Blandford Forum" },
+    { value: "winterbourne", label: "Winterbourne" },
+    { value: "broadmayne", label: "Broadmayne" },
+    { value: "maiden-newton", label: "Maiden Newton" },
+    { value: "charminster", label: "Charminster" },
+    { value: "other-west-dorset", label: "Other West Dorset Area" },
+    { value: "outside-area", label: "Outside West Dorset" },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20">
       {/* Desktop Background Image */}
@@ -120,6 +135,27 @@ export default function Hero() {
                   />
                 </div>
                 <div>
+                  <label htmlFor="hero-location" className="sr-only">Your Location</label>
+                  <select
+                    name="location"
+                    id="hero-location"
+                    required
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:border-vibrant-green focus:ring-vibrant-green text-gray-900 bg-white text-sm md:text-base"
+                  >
+                    {locationOptions.map(opt => (
+                      <option key={opt.value} value={opt.value} disabled={opt.value === ""}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ValidationError
+                    prefix="Location"
+                    field="location"
+                    errors={state.errors}
+                    className="text-red-400 text-xs"
+                  />
+                </div>
+                <div>
                   <label htmlFor="hero-service" className="sr-only">Choose a cleaning service</label>
                   <select
                     name="service"
@@ -145,7 +181,7 @@ export default function Hero() {
                   disabled={state.submitting}
                   className="w-full bg-white hover:bg-gray-100 text-vibrant-green font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-lg transition-colors duration-300 text-base md:text-lg shadow-md mt-auto border-2 border-black"
                 >
-                  Request Cleaners Quote
+                  Get Free Cleaning Quote
                 </button>
                 </form>
               )}
