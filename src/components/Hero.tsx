@@ -32,7 +32,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20">
       {/* Desktop Background Image */}
       <Image
-        src="images/bath.jpg"
+        src="/images/bath.jpg"
         alt="Professional cleaners Dorchester - sparkling clean home"
         fill
         className="hidden md:block object-cover z-0"
@@ -41,7 +41,7 @@ export default function Hero() {
       
       {/* Mobile Background Image */}
       <Image
-        src="images/hero-mobile.jpg"
+        src="/images/hero-mobile.jpg"
         alt="House cleaners West Dorset - clean home background"
         fill
         className="block md:hidden object-cover z-0"

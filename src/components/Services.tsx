@@ -6,19 +6,19 @@ export default function Services() {
     {
       title: "Regular House Cleaning",
       description: "Our local house cleaners will ensure your home is always in immaculate condition. Professional cleaners providing weekly and fortnightly cleaning services across West Dorset.",
-      image: "images/living.jpg",
+      image: "/images/living.jpg",
       features: ["Weekly/fortnightly house cleaners", "Kitchen & bathroom deep clean", "Professional dusting & vacuuming", "Eco-friendly cleaning products"]
     },
     {
       title: "Deep Cleaning Service",
       description: "Comprehensive deep cleaning by experienced cleaners that reaches every corner of your home. Perfect for spring cleaning or one-off intensive cleaning needs in Dorchester and West Dorset.",
-      image: "images/deep.jpg",
+      image: "/images/deep.jpg",
       features: ["Complete top-to-bottom clean", "Inside appliances & cupboards", "Detailed bathroom sanitization", "Professional deep cleaning team"]
     },
     {
       title: "End of Tenancy Cleaning",
       description: "Professional end of tenancy cleaners to help you get your deposit back. Our experienced cleaners follow strict checklists to ensure your property meets landlord standards.",
-      image: "images/oven.jpg",
+      image: "/images/oven.jpg",
       features: ["Deposit-back guarantee", "Complete property checklist", "Inside oven & appliances", "Professional carpet cleaning available"]
     }
   ]

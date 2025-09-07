@@ -25,7 +25,10 @@ const config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+  ],
 };
 
 module.exports = config;
