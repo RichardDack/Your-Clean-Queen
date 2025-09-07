@@ -1,4 +1,5 @@
 import { createClient } from 'contentful'
+import { RichTextDocument } from '../types'
 
 // Contentful client for published content
 export const client = createClient({
@@ -25,8 +26,8 @@ export interface BlogPost {
   fields: {
     title: string
     slug: string
-    excerpt: any // Rich text content
-    content: any // Rich text content
+    excerpt: RichTextDocument | string
+    content: RichTextDocument | string
     featuredImage?: {
       fields: {
         file: {
@@ -42,12 +43,12 @@ export interface BlogPost {
       }
     }
     seoTitle: string
-    seoDescription: any // Rich text content
+    seoDescription: RichTextDocument | string
     targetKeywords?: string
     category: string
     publishedDate: string
     author: string
-    competitorAnalysisNotes?: any // Rich text content
+    competitorAnalysisNotes?: RichTextDocument | string
   }
 }
 

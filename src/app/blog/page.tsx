@@ -26,12 +26,12 @@ export default async function BlogPage() {
               Your Clean Queen Blog
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Expert cleaning tips, guides, and insights from Dorchester's premium cleaning service
+              Expert cleaning tips, guides, and insights from Dorchester&apos;s premium cleaning service
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block border-2 border-black">
               <p className="text-lg">
-                <span className="font-semibold">Royal Treatment Expertise</span> - 
-                Professional insights that generic cleaning companies don't share
+                <span className="font-semibold">Royal Treatment Expertise</span> -
+                Professional insights that generic cleaning companies don&apos;t share
               </p>
             </div>
           </div>
@@ -49,11 +49,11 @@ export default async function BlogPage() {
                     Latest Cleaning Guides & Tips
                   </h2>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Comprehensive guides and professional tips to help you maintain a spotless home. 
-                    Content you won't find from other Dorchester cleaning companies.
+                    Comprehensive guides and professional tips to help you maintain a spotless home.
+                    Content you won&apos;t find from other Dorchester cleaning companies.
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {posts.map((post) => (
                     <BlogCard key={post.sys.id} post={post} />
@@ -66,12 +66,12 @@ export default async function BlogPage() {
                   Blog Coming Soon!
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  We're preparing comprehensive cleaning guides and tips that will give you 
+                  We&apos;re preparing comprehensive cleaning guides and tips that will give you
                   the Royal Treatment expertise. Stay tuned!
                 </p>
                 <div className="bg-sage-green/20 border-2 border-black rounded-lg p-6 max-w-md mx-auto">
                   <p className="text-gray-800 font-medium">
-                    🏆 Competitive Advantage: We'll be the ONLY cleaning company in Dorchester with a comprehensive blog!
+                    🏆 Competitive Advantage: We&apos;ll be the ONLY cleaning company in Dorchester with a comprehensive blog!
                   </p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default async function BlogPage() {
             Ready for the Royal Treatment?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            While you're learning from our expert guides, let us handle the actual cleaning!
+            While you&apos;re learning from our expert guides, let us handle the actual cleaning!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

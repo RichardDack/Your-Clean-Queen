@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPost } from '../app/lib/contentful'
+import { RichTextDocument } from '../app/types'
 import RichTextRenderer from './RichTextRenderer'
 
 interface BlogPostContentProps {
@@ -8,17 +9,17 @@ interface BlogPostContentProps {
 }
 
 // Helper function to extract plain text from Contentful rich text
-function extractPlainText(richText: any): string {
+function extractPlainText(richText: RichTextDocument | string | null | undefined): string {
   if (!richText) return ''
   if (typeof richText === 'string') return richText
   
   // If it's a Contentful rich text object
-  if (richText.content && Array.isArray(richText.content)) {
+  if (typeof richText === 'object' && richText && 'content' in richText && Array.isArray(richText.content)) {
     return richText.content
-      .map((node: any) => {
+      .map((node) => {
         if (node.nodeType === 'paragraph' && node.content) {
           return node.content
-            .map((textNode: any) => textNode.value || '')
+            .map((textNode) => ('value' in textNode ? textNode.value : '') || '')
             .join('')
         }
         return ''
@@ -42,7 +43,6 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
   
   // Extract plain text from rich text fields
   const excerptText = extractPlainText(fields.excerpt)
-  const seoDescriptionText = extractPlainText(fields.seoDescription)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -123,7 +123,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Royal Treatment Exclusive Content</h3>
                     <p className="text-gray-800 text-sm">
-                      This comprehensive guide provides professional insights that other Dorchester cleaning companies don't share. 
+                      This comprehensive guide provides professional insights that other Dorchester cleaning companies don&apos;t share. 
                       Get the expert knowledge that gives Your Clean Queen the competitive edge.
                     </p>
                   </div>

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getBlogPost, getBlogPosts } from '../../lib/contentful'
+import { RichTextDocument } from '../../types'
 import BlogPostContent from '../../../components/BlogPostContent'
 
 interface BlogPostPageProps {
@@ -19,17 +20,17 @@ export async function generateStaticParams() {
 }
 
 // Helper function to extract plain text from Contentful rich text
-function extractPlainText(richText: any): string {
+function extractPlainText(richText: RichTextDocument | string | null | undefined): string {
   if (!richText) return ''
   if (typeof richText === 'string') return richText
   
   // If it's a Contentful rich text object
-  if (richText.content && Array.isArray(richText.content)) {
+  if (typeof richText === 'object' && richText && 'content' in richText && Array.isArray(richText.content)) {
     return richText.content
-      .map((node: any) => {
+      .map((node) => {
         if (node.nodeType === 'paragraph' && node.content) {
           return node.content
-            .map((textNode: any) => textNode.value || '')
+            .map((textNode) => ('value' in textNode ? textNode.value : '') || '')
             .join('')
         }
         return ''

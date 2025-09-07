@@ -6,18 +6,20 @@ interface BlogCardProps {
   post: BlogPost
 }
 
+import { RichTextDocument } from '../app/types'
+
 // Helper function to extract plain text from Contentful rich text
-function extractPlainText(richText: any): string {
+function extractPlainText(richText: RichTextDocument | string | null | undefined): string {
   if (!richText) return ''
   if (typeof richText === 'string') return richText
   
   // If it's a Contentful rich text object
-  if (richText.content && Array.isArray(richText.content)) {
+  if (typeof richText === 'object' && richText && 'content' in richText && Array.isArray(richText.content)) {
     return richText.content
-      .map((node: any) => {
+      .map((node) => {
         if (node.nodeType === 'paragraph' && node.content) {
           return node.content
-            .map((textNode: any) => textNode.value || '')
+            .map((textNode) => ('value' in textNode ? textNode.value : '') || '')
             .join('')
         }
         return ''
@@ -109,7 +111,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 <svg className="w-4 h-4 text-vibrant-green" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Royal Treatment Exclusive - Content competitors don't offer
+                Royal Treatment Exclusive - Content competitors don&apos;t offer
               </p>
             </div>
           </div>

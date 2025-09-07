@@ -36,3 +36,24 @@ export interface BusinessInfo {
   phone: string;
   email: string;
 }
+
+// Rich Text Types for Contentful
+export interface RichTextMark {
+  type: 'bold' | 'italic' | 'underline' | 'code';
+}
+
+export interface RichTextTextNode {
+  nodeType: 'text';
+  value: string;
+  marks?: RichTextMark[];
+}
+
+export interface RichTextNode {
+  nodeType: 'paragraph' | 'heading-1' | 'heading-2' | 'heading-3' | 'unordered-list' | 'ordered-list' | 'list-item' | 'blockquote' | 'hr';
+  content?: (RichTextNode | RichTextTextNode)[];
+}
+
+export interface RichTextDocument {
+  nodeType: 'document';
+  content: RichTextNode[];
+}
