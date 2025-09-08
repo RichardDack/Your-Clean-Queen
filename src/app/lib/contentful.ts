@@ -58,7 +58,7 @@ export async function getBlogPosts(limit = 10): Promise<BlogPost[]> {
     const response = await client.getEntries({
       content_type: 'article',
       limit,
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
     })
     
     return response.items as BlogPost[]
