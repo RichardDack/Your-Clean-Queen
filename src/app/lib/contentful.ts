@@ -61,7 +61,7 @@ export async function getBlogPosts(limit = 10): Promise<BlogPost[]> {
       order: ['-fields.publishedDate'],
     })
     
-    return response.items as BlogPost[]
+    return response.items as unknown as BlogPost[]
   } catch (error) {
     console.error('Error fetching blog posts:', error)
     return []
@@ -77,7 +77,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
     })
     
     if (response.items.length > 0) {
-      return response.items[0] as BlogPost
+      return response.items[0] as unknown as BlogPost
     }
     
     return null
@@ -93,10 +93,10 @@ export async function getBlogPostsByCategory(category: string, limit = 10): Prom
       content_type: 'article',
       'fields.category': category,
       limit,
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
     })
     
-    return response.items as BlogPost[]
+    return response.items as unknown as BlogPost[]
   } catch (error) {
     console.error('Error fetching blog posts by category:', error)
     return []
