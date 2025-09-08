@@ -1,60 +1,59 @@
 import type { Metadata } from 'next';
 import { BUSINESS_INFO, SERVICE_AREAS, LOCAL_KEYWORDS } from './seo-constants';
+import { enhancedSEO } from './enhanced-seo-utils';
+import { competitiveMeta } from './competitive-meta-optimizer';
 
-// Generate SEO-optimized metadata for different page types
+// Generate SEO-optimized metadata for different page types (Enhanced with competitive optimization)
 export function generatePageMetadata({
   title,
   description,
   keywords = [],
   location,
   canonical,
+  pageType = 'homepage',
+  service,
+  premiumPositioning = true
 }: {
   title: string;
   description: string;
   keywords?: string[];
   location?: string;
   canonical?: string;
+  pageType?: 'homepage' | 'service' | 'location' | 'blog' | 'blog-post';
+  service?: string;
+  premiumPositioning?: boolean;
 }): Metadata {
   
-  // Build comprehensive keywords array
-  const allKeywords = [
-    ...keywords,
-    ...LOCAL_KEYWORDS.primary.slice(0, 10), // Top local keywords
-    "professional cleaning Dorset",
-    "reliable house cleaning", 
-    "domestic cleaning services",
-    "Your Clean Queen"
-  ];
-
-  return {
-    title,
-    description,
-    keywords: allKeywords,
-    
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      siteName: BUSINESS_INFO.name,
-      locale: 'en_GB',
-      type: 'website',
-    },
-    
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-    },
-    
-    alternates: {
-      canonical
-    },
-    
-    other: location ? {
-      'geo.placename': `${location}, Dorset`,
-      'geo.region': 'GB-DOR',
-    } : {}
-  };
+  // Use enhanced SEO utilities for competitive advantage
+  if (pageType === 'service' && service) {
+    return enhancedSEO.generateServicePageMeta(service, location, {
+      customTitle: title,
+      customDescription: description,
+      canonical,
+      premiumPositioning
+    });
+  }
+  
+  if (pageType === 'location' && location) {
+    return enhancedSEO.generateLocationPageMeta(location, {
+      customTitle: title,
+      customDescription: description,
+      canonical,
+      premiumPositioning
+    });
+  }
+  
+  // Fallback to competitive meta generation
+  return competitiveMeta.generateMetadata({
+    service,
+    location,
+    pageType,
+    targetKeywords: keywords,
+    customTitle: title,
+    customDescription: description,
+    canonical,
+    premiumPositioning
+  });
 }
 
 // Generate location-specific SEO content

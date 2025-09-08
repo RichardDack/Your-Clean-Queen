@@ -45,7 +45,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   const excerptText = extractPlainText(fields.excerpt)
 
   return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border-2 border-black">
+    <article className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 border-2 border-black group">
       {/* Featured Image */}
       {fields.featuredImage && (
         <div className="relative h-48 w-full">
@@ -63,7 +63,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       <div className="p-6">
         {/* Category & Date */}
         <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-          <span className="bg-sage-green text-gray-800 px-2 py-1 rounded-full font-medium">
+          <span className="bg-sage-green text-gray-800 px-3 py-1 rounded-full font-medium border-2 border-black">
             {fields.category}
           </span>
           <time dateTime={fields.publishedDate}>
@@ -72,7 +72,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
         
         {/* Title */}
-        <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
           <Link 
             href={`/blog/${fields.slug}`}
             className="hover:text-vibrant-green transition-colors"
@@ -82,7 +82,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         </h2>
         
         {/* Excerpt */}
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
           {excerptText}
         </p>
         
@@ -103,15 +103,15 @@ export default function BlogCard({ post }: BlogCardProps) {
           </Link>
         </div>
         
-        {/* Competitive Advantage Badge (if has competitor analysis) */}
+        {/* Expert Content Badge */}
         {fields.competitorAnalysisNotes && (
           <div className="mt-4 pt-4 border-t border-gray-100">
-            <div className="bg-sage-green/20 border-2 border-black rounded-lg p-3">
-              <p className="text-xs text-gray-800 font-medium flex items-center gap-1">
+            <div className="bg-sage-green/20 rounded-lg p-3 border-2 border-black">
+              <p className="text-xs text-gray-800 font-medium flex items-center gap-2">
                 <svg className="w-4 h-4 text-vibrant-green" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Royal Treatment Exclusive - Content competitors don&apos;t offer
+                Expert insights from Your Clean Queen professionals
               </p>
             </div>
           </div>

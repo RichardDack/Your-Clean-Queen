@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Script from 'next/script'
+import { enhancedSEO } from '../lib/enhanced-seo-utils'
 import Navbar from '../../components/Navbar'
 import TrustBar from '../../components/TrustBar'
 import Services from '../../components/Services'
@@ -9,31 +10,12 @@ import GoogleReviews from '../../components/GoogleReviews'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: "Professional Cleaners Dorchester | House Cleaning Services | Your Clean Queen",
-  description: "Professional cleaners in Dorchester providing reliable house cleaning services. Weekly, fortnightly & one-off cleaning. Fully insured cleaners with 5+ years experience in Dorchester.",
-  keywords: [
-    "cleaners Dorchester",
-    "house cleaners Dorchester", 
-    "professional cleaners Dorchester",
-    "domestic cleaners Dorchester",
-    "reliable cleaners Dorchester",
-    "weekly cleaning Dorchester",
-    "fortnightly cleaning Dorchester",
-    "one-off cleaning Dorchester",
-    "deep cleaning Dorchester",
-    "end of tenancy cleaning Dorchester",
-    "local cleaners Dorchester",
-    "trusted cleaners Dorchester",
-    "insured cleaners Dorchester",
-    "Your Clean Queen Dorchester"
-  ],
-  openGraph: {
-    title: "Professional Cleaners Dorchester | Your Clean Queen",
-    description: "Professional house cleaners in Dorchester. Reliable, insured cleaning services with 5+ years experience. Book your Dorchester cleaning service today.",
-    url: "https://yourcleanqueen.co.uk/cleaners-dorchester",
-  },
-}
+export const metadata: Metadata = enhancedSEO.generateLocationPageMeta('Dorchester', {
+  customTitle: "Professional Cleaners Dorchester | Royal Treatment | Local Specialists | Your Clean Queen",
+  customDescription: "Professional cleaners in Dorchester with Royal Treatment standards and local expertise. Superior quality vs generic competitors like Lucy's Cleaning. Fully insured & DBS checked with 5+ years Dorchester experience.",
+  canonical: "https://yourcleanqueen.co.uk/cleaners-dorchester",
+  premiumPositioning: true
+})
 
 function OtherAreasSection() {
   const otherAreas = [

@@ -3,15 +3,15 @@ import { RichTextDocument } from '../types'
 
 // Contentful client for published content
 export const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+  space: process.env.CONTENTFUL_SPACE_ID || '',
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
   environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
 })
 
 // Contentful client for preview content (drafts)
 export const previewClient = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN!,
+  space: process.env.CONTENTFUL_SPACE_ID || '',
+  accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN || '',
   environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
   host: 'preview.contentful.com',
 })
