@@ -30,7 +30,7 @@ export default function ProfessionalCleanersPoundbury() {
   // Enhanced service details for Poundbury location
   const serviceDetails = {
     name: "Professional Cleaners Poundbury",
-    description: "Professional cleaning services in Poundbury with specialized local expertise. Understanding modern developments, community standards, and contemporary property care. Tailored service for Poundbury's unique blend of traditional architecture and modern living.",
+    description: "Professional cleaning services in Poundbury with specialized local expertise. Understanding modern developments, community standards, and contemporary property care. Tailored service for Poundbury&apos;s unique blend of traditional architecture and modern living.",
     serviceType: "House Cleaning",
     areaServed: ["Poundbury", "Dorchester", "Queen Mother Square", "Brownsword Hall Area"],
     priceRange: "££",
@@ -51,12 +51,12 @@ export default function ProfessionalCleanersPoundbury() {
   const faqs = [
     ...richSnippetsSchema.SERVICE_FAQS.poundbury,
     {
-      question: "Do you understand Poundbury's unique architectural requirements?",
-      answer: "Yes, we understand Poundbury's unique blend of traditional architecture and modern living. Our cleaning approach respects both the community's heritage values and contemporary lifestyle needs, ensuring appropriate care for all property types."
+      question: "Do you understand Poundbury&apos;s unique architectural requirements?",
+      answer: "Yes, we understand Poundbury&apos;s unique blend of traditional architecture and modern living. Our cleaning approach respects both the community&apos;s heritage values and contemporary lifestyle needs, ensuring appropriate care for all property types."
     },
     {
-      question: "Can you work around Poundbury's community guidelines?",
-      answer: "Absolutely! We're familiar with Poundbury's community standards and guidelines. Our professional, respectful approach aligns with the development's values while providing excellent cleaning services."
+      question: "Can you work around Poundbury&apos;s community guidelines?",
+      answer: "Absolutely! We&apos;re familiar with Poundbury&apos;s community standards and guidelines. Our professional, respectful approach aligns with the development&apos;s values while providing excellent cleaning services."
     }
   ];
 
@@ -126,8 +126,8 @@ export default function ProfessionalCleanersPoundbury() {
               <span className="block text-accent-cream mt-2">Poundbury</span>
             </h1>
             <p className="text-lg md:text-xl text-white/95 leading-relaxed mb-8 max-w-2xl">
-              Local expertise for Poundbury's modern developments and residential properties. 
-              Professional cleaning services with deep understanding of your community's standards.
+              Local expertise for Poundbury&apos;s modern developments and residential properties. 
+              Professional cleaning services with deep understanding of your community&apos;s standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -158,7 +158,7 @@ export default function ProfessionalCleanersPoundbury() {
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 As professional cleaners serving Poundbury, we understand the unique characteristics 
                 of this modern development. From contemporary apartments to traditional-style houses, 
-                we provide specialized cleaning services tailored to Poundbury's high standards.
+                we provide specialized cleaning services tailored to Poundbury&apos;s high standards.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -184,9 +184,9 @@ export default function ProfessionalCleanersPoundbury() {
                   Why Choose Local Poundbury Cleaners?
                 </h3>
                 <p className="text-gray-700">
-                  Our local knowledge means we understand Poundbury's unique blend of traditional 
+                  Our local knowledge means we understand Poundbury&apos;s unique blend of traditional 
                   architecture and modern living, providing cleaning services that respect both 
-                  the community's values and contemporary lifestyle needs.
+                  the community&apos;s values and contemporary lifestyle needs.
                 </p>
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function ProfessionalCleanersPoundbury() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-800 mb-6">
-              Understanding Poundbury's Unique Community
+              Understanding Poundbury&apos;s Unique Community
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Poundbury represents a unique blend of traditional architecture and modern living. 
@@ -295,11 +295,11 @@ export default function ProfessionalCleanersPoundbury() {
                 {[
                   {
                     title: "Environmental Responsibility",
-                    description: "Eco-friendly cleaning products that align with Poundbury's sustainability values"
+                    description: "Eco-friendly cleaning products that align with Poundbury&apos;s sustainability values"
                   },
                   {
                     title: "Community Standards",
-                    description: "High-quality service that maintains the development's prestigious reputation"
+                    description: "High-quality service that maintains the development&apos;s prestigious reputation"
                   },
                   {
                     title: "Respectful Service",
@@ -342,8 +342,8 @@ export default function ProfessionalCleanersPoundbury() {
 
               <div className="mt-6 pt-6 border-t border-vibrant-green/20">
                 <p className="text-gray-700 text-sm italic">
-                  "We're proud to serve the Poundbury community with cleaning services 
-                  that match the development's commitment to quality and excellence."
+                  "                  &ldquo;We&apos;re proud to serve the Poundbury community with cleaning services 
+                  that match the development&apos;s commitment to quality and excellence.&rdquo;"
                 </p>
               </div>
             </div>
@@ -359,7 +359,7 @@ export default function ProfessionalCleanersPoundbury() {
               Serving All Areas of Poundbury
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional cleaning services throughout Poundbury's different phases and developments.
+              Professional cleaning services throughout Poundbury&apos;s different phases and developments.
             </p>
           </div>
 
@@ -382,7 +382,7 @@ export default function ProfessionalCleanersPoundbury() {
 
           <div className="text-center mt-8">
             <p className="text-gray-600">
-              Don't see your specific area listed? We serve all of Poundbury - 
+              Don&apos;t see your specific area listed? We serve all of Poundbury - 
               <Link href="#contact" className="text-vibrant-green hover:underline ml-1">
                 contact us for your location
               </Link>

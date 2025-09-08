@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { BUSINESS_INFO, SERVICE_AREAS } from './seo-constants';
+import { BUSINESS_INFO } from './seo-constants';
 
 // Competitive meta optimization engine for dominating search results
 export interface CompetitiveMetaOptions {
@@ -202,7 +202,6 @@ export function generateCompetitiveMetadata(options: CompetitiveMetaOptions & {
   const {
     service,
     location,
-    pageType,
     targetKeywords = [],
     customTitle,
     customDescription,
@@ -312,8 +311,6 @@ export function generateCompetitorSuperiorMeta(
   competitorType: keyof typeof COMPETITOR_WEAKNESSES,
   options: CompetitiveMetaOptions
 ): Metadata {
-  const competitor = COMPETITOR_WEAKNESSES[competitorType];
-
   // Customize approach based on competitor weaknesses
   const enhancedOptions = {
     ...options,

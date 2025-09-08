@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { BUSINESS_INFO, SERVICE_AREAS, LOCAL_KEYWORDS } from './seo-constants';
+import { BUSINESS_INFO } from './seo-constants';
 import { enhancedSEO } from './enhanced-seo-utils';
 import { competitiveMeta } from './competitive-meta-optimizer';
 

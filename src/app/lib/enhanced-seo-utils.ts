@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { competitiveMeta, type CompetitiveMetaOptions } from './competitive-meta-optimizer';
-import { BUSINESS_INFO, SERVICE_AREAS, LOCAL_KEYWORDS } from './seo-constants';
+import { BUSINESS_INFO } from './seo-constants';
 
 // Enhanced SEO utilities with Royal Treatment positioning
 export interface EnhancedSEOOptions {
@@ -265,7 +265,6 @@ export function generateNewServiceMeta(
   monthlySearches: number,
   competitorContent: boolean = false
 ): Metadata {
-  const urgencyLevel = monthlySearches > 50 ? 'high' : monthlySearches > 10 ? 'medium' : 'low';
   const hasCompetition = competitorContent;
   
   // Customize approach based on opportunity size and competition

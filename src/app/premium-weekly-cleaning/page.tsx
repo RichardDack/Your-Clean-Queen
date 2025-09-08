@@ -9,7 +9,7 @@ import { richSnippetsSchema } from '../lib/rich-snippets-schema'
 
 export const metadata: Metadata = {
   title: "Premium Weekly Cleaning | Royal Treatment Quality Standards | Superior to Budget Services | Your Clean Queen",
-  description: "Premium weekly cleaning services with Royal Treatment quality standards. Superior professional service vs budget competitors like Maid2Clean's £17.48/hour. Fully insured & DBS checked cleaners.",
+  description: "Premium weekly cleaning services with Royal Treatment quality standards. Superior professional service vs budget competitors like Maid2Clean&apos;s £17.48/hour. Fully insured & DBS checked cleaners.",
   keywords: [
     "premium weekly cleaning",
     "royal treatment cleaning",
@@ -30,7 +30,7 @@ export default function PremiumWeeklyCleaning() {
   // Enhanced service details for rich snippets
   const serviceDetails = {
     name: "Premium Weekly Cleaning",
-    description: "Premium weekly cleaning services with Royal Treatment quality standards. Professional cleaners providing superior service vs budget competitors like Maid2Clean's £17.48/hour basic approach. Personalized, thorough cleaning that treats your home like royalty.",
+    description: "Premium weekly cleaning services with Royal Treatment quality standards. Professional cleaners providing superior service vs budget competitors like Maid2Clean&apos;s £17.48/hour basic approach. Personalized, thorough cleaning that treats your home like royalty.",
     serviceType: "Weekly House Cleaning",
     areaServed: ["Dorchester", "Weymouth", "Poundbury", "Charminster", "Upwey", "Chickerell"],
     priceRange: "££",
@@ -51,12 +51,12 @@ export default function PremiumWeeklyCleaning() {
   const faqs = [
     ...richSnippetsSchema.SERVICE_FAQS.weeklycleaning,
     {
-      question: "Why is Your Clean Queen better than Maid2Clean's £17.48/hour service?",
+      question: "Why is Your Clean Queen better than Maid2Clean&apos;s £17.48/hour service?",
       answer: "While Maid2Clean focuses on speed and low prices, our Royal Treatment approach prioritizes quality, consistency, and personalized service. Our DBS-checked cleaners spend the time needed to properly clean your home, not rush through it."
     },
     {
       question: "Do you offer fortnightly cleaning as well as weekly?",
-      answer: "Yes, we offer both weekly and fortnightly cleaning services with the same Royal Treatment quality standards. We'll work with you to find the perfect schedule for your home and lifestyle."
+      answer: "Yes, we offer both weekly and fortnightly cleaning services with the same Royal Treatment quality standards. We&apos;ll work with you to find the perfect schedule for your home and lifestyle."
     }
   ];
 
@@ -198,7 +198,7 @@ export default function PremiumWeeklyCleaning() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-800 mb-6">
-              What's Included in Premium Weekly Cleaning
+              What&apos;s Included in Premium Weekly Cleaning
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Every premium weekly clean includes comprehensive attention to detail 

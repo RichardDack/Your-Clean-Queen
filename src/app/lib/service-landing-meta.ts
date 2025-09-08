@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { enhancedSEO } from './enhanced-seo-utils';
-import { competitiveMeta, EMOTIONAL_TRIGGERS } from './competitive-meta-optimizer';
+import { competitiveMeta } from './competitive-meta-optimizer';
 import { BUSINESS_INFO } from './seo-constants';
 
 // Service landing page meta optimization for gap exploitation
@@ -72,7 +71,7 @@ const SERVICE_META_TEMPLATES = {
 
 // Generate meta for service landing pages that exploit competitor gaps
 export function generateServiceLandingMeta(options: ServiceLandingOptions): Metadata {
-  const { service, location, monthlySearches, competitorContent = false, isNewService = false } = options;
+  const { service, location } = options;
   
   // Check if we have a predefined template for this service
   const serviceTemplate = SERVICE_META_TEMPLATES[service as keyof typeof SERVICE_META_TEMPLATES];
@@ -166,10 +165,7 @@ function generatePredefinedServiceMeta(
 
 // Generate custom meta for new services
 function generateCustomServiceMeta(options: ServiceLandingOptions): Metadata {
-  const { service, location, monthlySearches = 0, competitorContent = false, targetCompetitor } = options;
-  
-  // Determine opportunity level
-  const isHighOpportunity = monthlySearches > 50 || !competitorContent;
+  const { service, location, competitorContent = false } = options;
   const isExclusiveOpportunity = !competitorContent;
   
   // Build title with competitive positioning

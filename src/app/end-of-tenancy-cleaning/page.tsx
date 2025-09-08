@@ -31,7 +31,7 @@ export default function EndOfTenancyCleaningPage() {
                 ⭐ ONLY Comprehensive Service Available ⭐
               </p>
               <p className="text-sm mt-2 opacity-90">
-                Lucy's Cleaning & Maid2Clean don't offer this expertise
+                Lucy&apos;s Cleaning & Maid2Clean don&apos;t offer this expertise
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function EndOfTenancyCleaningPage() {
                 <div className="text-vibrant-green text-4xl mb-4">🏠</div>
                 <h3 className="text-xl font-semibold mb-3">Deposit-Back Guarantee</h3>
                 <p className="text-gray-600">
-                  Professional cleaning that meets landlord standards. Get your full deposit back or we'll return to re-clean for free.
+                  Professional cleaning that meets landlord standards. Get your full deposit back or we&apos;ll return to re-clean for free.
                 </p>
               </div>
 
@@ -64,7 +64,7 @@ export default function EndOfTenancyCleaningPage() {
                 <div className="text-vibrant-green text-4xl mb-4">✅</div>
                 <h3 className="text-xl font-semibold mb-3">Comprehensive Checklist</h3>
                 <p className="text-gray-600">
-                  Detailed 50-point checklist covering every area landlords inspect. Professional standards that competitors don't match.
+                  Detailed 50-point checklist covering every area landlords inspect. Professional standards that competitors don&apos;t match.
                 </p>
               </div>
 
@@ -85,7 +85,7 @@ export default function EndOfTenancyCleaningPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-semibold text-center mb-12">
-              What's Included in Our End of Tenancy Clean
+              What&apos;s Included in Our End of Tenancy Clean
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -142,7 +142,7 @@ export default function EndOfTenancyCleaningPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-semibold mb-8">
-              Why We're Different from Other Cleaning Companies
+              Why We&apos;re Different from Other Cleaning Companies
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -158,7 +158,7 @@ export default function EndOfTenancyCleaningPage() {
               </div>
 
               <div className="bg-red-500/20 backdrop-blur-sm rounded-lg p-6 border-2 border-red-300">
-                <h3 className="text-xl font-semibold mb-3">Lucy's Cleaning</h3>
+                <h3 className="text-xl font-semibold mb-3">Lucy&apos;s Cleaning</h3>
                 <ul className="text-left space-y-2 opacity-75">
                   <li>❌ No end of tenancy service</li>
                   <li>❌ No deposit guarantee</li>

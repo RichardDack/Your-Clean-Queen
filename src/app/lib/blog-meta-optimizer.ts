@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { competitiveMeta, EMOTIONAL_TRIGGERS } from './competitive-meta-optimizer';
+// Removed unused import: competitiveMeta
 import { BUSINESS_INFO } from './seo-constants';
 
 // Blog-specific meta optimization for content authority
@@ -80,8 +80,7 @@ export function generateBlogPostMeta(options: BlogMetaOptions): Metadata {
     contentType = 'guide'
   } = options;
   
-  // Get authority template
-  const authorityTemplate = AUTHORITY_TEMPLATES[authorityLevel];
+  // Get content optimization settings
   const contentOptimization = CONTENT_TYPE_OPTIMIZATION[contentType];
   
   // Build comprehensive keywords
@@ -179,7 +178,7 @@ function generateBlogTitle(
   const competitivePrefix = competitorGap ? 'EXCLUSIVE: ' : '';
   
   // Format title based on content type
-  let formattedTitle = contentOpt.titleFormat
+  const formattedTitle = contentOpt.titleFormat
     .replace('{authority}', authority.titlePrefix)
     .replace('{title}', title)
     .replace('{business_name}', BUSINESS_INFO.name)
@@ -197,7 +196,6 @@ function generateBlogDescription(
   competitorGap: boolean,
   location: string
 ): string {
-  const authority = AUTHORITY_TEMPLATES[authorityLevel!];
   const contentOpt = CONTENT_TYPE_OPTIMIZATION[contentType!];
   
   // Build expertise statement
