@@ -116,11 +116,11 @@ function renderRichTextNode(node: RichTextNode | RichTextTextNode, index: number
     
     default:
       // Handle unknown node types gracefully
-      const nodeWithContent = node as any
+      const nodeWithContent = node as RichTextNode
       if (nodeWithContent.content && Array.isArray(nodeWithContent.content)) {
         return (
           <div key={index}>
-            {nodeWithContent.content.map((child: any, childIndex: number) => 
+            {nodeWithContent.content.map((child, childIndex: number) => 
               renderRichTextNode(child, childIndex)
             )}
           </div>
