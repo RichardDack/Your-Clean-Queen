@@ -342,8 +342,8 @@ export default function ProfessionalCleanersPoundbury() {
 
               <div className="mt-6 pt-6 border-t border-vibrant-green/20">
                 <p className="text-gray-700 text-sm italic">
-                  "                  &ldquo;We&apos;re proud to serve the Poundbury community with cleaning services 
-                  that match the development&apos;s commitment to quality and excellence.&rdquo;"
+                  &ldquo;We&apos;re proud to serve the Poundbury community with cleaning services 
+                  that match the development&apos;s commitment to quality and excellence.&rdquo;
                 </p>
               </div>
             </div>
