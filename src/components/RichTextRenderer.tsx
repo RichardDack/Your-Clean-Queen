@@ -117,9 +117,10 @@ function renderRichTextNode(node: RichTextNode | RichTextTextNode, index: number
     default:
       // Handle unknown node types gracefully
       if ('content' in node && node.content) {
+        const nodeWithContent = node as RichTextNode
         return (
           <div key={index}>
-            {node.content.map((child, childIndex: number) => 
+            {nodeWithContent.content?.map((child, childIndex: number) => 
               renderRichTextNode(child, childIndex)
             )}
           </div>
