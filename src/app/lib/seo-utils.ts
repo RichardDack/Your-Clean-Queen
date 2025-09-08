@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-// Removed unused import: BUSINESS_INFO
+import { SERVICE_AREAS } from './seo-constants';
 import { enhancedSEO } from './enhanced-seo-utils';
 import { competitiveMeta } from './competitive-meta-optimizer';
 
