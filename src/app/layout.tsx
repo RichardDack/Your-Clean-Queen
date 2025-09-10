@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: "Professional Cleaners Dorchester | Royal Treatment | Fully Insured & DBS Checked | Your Clean Queen",
     template: "%s | Royal Treatment | Your Clean Queen"
   },
-  description: "Professional cleaners in Dorchester and West Dorset with Royal Treatment standards. Superior quality vs budget competitors like Maid2Clean's £17.48/hour service. Fully insured & DBS checked with 5+ years experience.",
+  description: "Professional cleaners in Dorchester and West Dorset with Royal Treatment standards. Superior quality vs budget competitors. Fully insured & DBS checked with 5+ years experience.",
   keywords: [
     "cleaners Dorchester",
     "cleaners West Dorset", 

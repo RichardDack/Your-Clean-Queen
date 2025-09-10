@@ -212,7 +212,7 @@ export const serviceSpecificExamples = {
 export const competitorGapExamples = {
   // Content that Lucy's Cleaning has NO blog to compete with
   lucysGapContent: blogMeta.generateCompetitorGapMeta(
-    "Professional Cleaning Secrets: Industry Insights Lucy's Cleaning Won't Share",
+    "Professional Cleaning Secrets: Industry Insights Competitors Won't Share",
     "Exclusive professional cleaning insights and techniques. Expert knowledge that generic cleaning services don't provide.",
     ["professional cleaning secrets", "industry insights", "expert cleaning techniques"],
     "no-blog",

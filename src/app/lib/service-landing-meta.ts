@@ -9,7 +9,7 @@ export interface ServiceLandingOptions {
   monthlySearches?: number;
   competitorContent?: boolean;
   isNewService?: boolean;
-  targetCompetitor?: 'lucys-cleaning' | 'maid2clean' | 'both';
+  targetCompetitor?: 'competitor a' | 'competitor b' | 'both';
 }
 
 // Service-specific meta templates for gap exploitation
@@ -19,7 +19,7 @@ const SERVICE_META_TEMPLATES = {
     monthlySearches: 13,
     competitorContent: false,
     titleTemplate: 'End of Tenancy Cleaning {location} | Deposit Back Guarantee | Royal Treatment',
-    descriptionTemplate: 'Professional end of tenancy cleaning in {location} with deposit-back guarantee. ONLY comprehensive service available - Lucy\'s Cleaning & Maid2Clean don\'t offer this expertise. Fully insured & DBS checked.',
+    descriptionTemplate: 'Professional end of tenancy cleaning in {location} with deposit-back guarantee. ONLY comprehensive service available - Competitors don\'t offer this expertise. Fully insured & DBS checked.',
     keywords: [
       'end of tenancy cleaning',
       'deposit back guarantee',
@@ -32,7 +32,7 @@ const SERVICE_META_TEMPLATES = {
     gapOpportunity: true, // Counter Maid2Clean's budget positioning
     competitorContent: true,
     titleTemplate: 'Premium Weekly Cleaning {location} | Royal Treatment vs Budget Services',
-    descriptionTemplate: 'Premium weekly cleaning in {location} with Royal Treatment standards. Superior quality vs Maid2Clean\'s £17.48/hour budget service. Professional, insured cleaners with 5+ years experience.',
+    descriptionTemplate: 'Premium weekly cleaning in {location} with Royal Treatment standards. Superior quality vs competitors £17.48/hour budget service. Professional, insured cleaners with 5+ years experience.',
     keywords: [
       'premium weekly cleaning',
       'quality weekly cleaning',
@@ -221,15 +221,15 @@ function generateCustomServiceMeta(options: ServiceLandingOptions): Metadata {
 export function generateCompetitorTargetedServiceMeta(
   service: string,
   location: string,
-  targetCompetitor: 'lucys-cleaning' | 'maid2clean'
+  targetCompetitor: 'competitor a' | 'competitor b'
 ): Metadata {
   const competitorStrategies = {
-    'lucys-cleaning': {
+    'competitor a': {
       titleStrategy: 'Expert Professional {service} {location} | Local Specialists | Royal Treatment',
       descriptionStrategy: 'Expert {service} in {location} with local specialist knowledge. Professional team vs generic services. Royal Treatment standards with 5+ years area expertise.',
       keywords: ['expert local service', 'specialist knowledge', 'professional expertise', 'local specialists']
     },
-    'maid2clean': {
+    'competitor b': {
       titleStrategy: 'Premium {service} {location} | Quality Over Price | Royal Treatment Standards',
       descriptionStrategy: 'Premium {service} in {location} with Royal Treatment quality standards. Professional service vs £17.48/hour budget alternatives. Quality investment for superior results.',
       keywords: ['premium vs budget', 'quality over price', 'professional vs cheap', 'royal treatment quality']

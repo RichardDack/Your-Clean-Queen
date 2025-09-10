@@ -200,7 +200,7 @@ function generateBlogDescription(
   
   // Build expertise statement
   const expertiseStatement = competitorGap 
-    ? 'Exclusive professional insights that Lucy\'s Cleaning and Maid2Clean don\'t provide.'
+    ? 'Exclusive professional insights that Competitors don\'t provide.'
     : 'Professional expertise from Dorchester\'s premium cleaning service.';
   
   // Extract topic from title for description

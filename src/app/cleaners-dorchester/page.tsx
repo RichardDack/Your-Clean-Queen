@@ -12,7 +12,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = enhancedSEO.generateLocationPageMeta('Dorchester', {
   customTitle: "Professional Cleaners Dorchester | Royal Treatment | Local Specialists | Your Clean Queen",
-  customDescription: "Professional cleaners in Dorchester with Royal Treatment standards and local expertise. Superior quality vs generic competitors like Lucy's Cleaning. Fully insured & DBS checked with 5+ years Dorchester experience.",
+  customDescription: "Professional cleaners in Dorchester with Royal Treatment standards and local expertise. Superior quality vs generic competitors. Fully insured & DBS checked with 5+ years Dorchester experience.",
   canonical: "https://yourcleanqueen.co.uk/cleaners-dorchester",
   premiumPositioning: true
 })

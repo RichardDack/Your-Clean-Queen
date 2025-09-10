@@ -31,7 +31,7 @@ export default function EndOfTenancyCleaningPage() {
                 ⭐ ONLY Comprehensive Service Available ⭐
               </p>
               <p className="text-sm mt-2 opacity-90">
-                Lucy&apos;s Cleaning & Maid2Clean don&apos;t offer this expertise
+                Competitors don&apos;t offer this expertise
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function EndOfTenancyCleaningPage() {
               </div>
 
               <div className="bg-red-500/20 backdrop-blur-sm rounded-lg p-6 border-2 border-red-300">
-                <h3 className="text-xl font-semibold mb-3">Lucy&apos;s Cleaning</h3>
+                <h3 className="text-xl font-semibold mb-3">Competitor A</h3>
                 <ul className="text-left space-y-2 opacity-75">
                   <li>❌ No end of tenancy service</li>
                   <li>❌ No deposit guarantee</li>
@@ -169,7 +169,7 @@ export default function EndOfTenancyCleaningPage() {
               </div>
 
               <div className="bg-red-500/20 backdrop-blur-sm rounded-lg p-6 border-2 border-red-300">
-                <h3 className="text-xl font-semibold mb-3">Maid2Clean</h3>
+                <h3 className="text-xl font-semibold mb-3">Competitor B</h3>
                 <ul className="text-left space-y-2 opacity-75">
                   <li>❌ No specialized service</li>
                   <li>❌ Budget £17.48/hour focus</li>

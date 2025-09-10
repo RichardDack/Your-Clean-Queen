@@ -9,7 +9,7 @@ import { richSnippetsSchema } from '../lib/rich-snippets-schema'
 
 export const metadata: Metadata = {
   title: "Premium Weekly Cleaning | Royal Treatment Quality Standards | Superior to Budget Services | Your Clean Queen",
-  description: "Premium weekly cleaning services with Royal Treatment quality standards. Superior professional service vs budget competitors like Maid2Clean&apos;s £17.48/hour. Fully insured & DBS checked cleaners.",
+  description: "Premium weekly cleaning services with Royal Treatment quality standards. Superior professional service vs budget competitors £17.48/hour. Fully insured & DBS checked cleaners.",
   keywords: [
     "premium weekly cleaning",
     "royal treatment cleaning",
@@ -30,7 +30,7 @@ export default function PremiumWeeklyCleaning() {
   // Enhanced service details for rich snippets
   const serviceDetails = {
     name: "Premium Weekly Cleaning",
-    description: "Premium weekly cleaning services with Royal Treatment quality standards. Professional cleaners providing superior service vs budget competitors like Maid2Clean&apos;s £17.48/hour basic approach. Personalized, thorough cleaning that treats your home like royalty.",
+    description: "Premium weekly cleaning services with Royal Treatment quality standards. Professional cleaners providing superior service vs budget competitors  £17.48/hour basic approach. Personalized, thorough cleaning that treats your home like royalty.",
     serviceType: "Weekly House Cleaning",
     areaServed: ["Dorchester", "Weymouth", "Poundbury", "Charminster", "Upwey", "Chickerell"],
     priceRange: "££",
@@ -51,8 +51,8 @@ export default function PremiumWeeklyCleaning() {
   const faqs = [
     ...richSnippetsSchema.SERVICE_FAQS.weeklycleaning,
     {
-      question: "Why is Your Clean Queen better than Maid2Clean&apos;s £17.48/hour service?",
-      answer: "While Maid2Clean focuses on speed and low prices, our Royal Treatment approach prioritizes quality, consistency, and personalized service. Our DBS-checked cleaners spend the time needed to properly clean your home, not rush through it."
+      question: "Why is Your Clean Queen better than £17.48/hour service?",
+      answer: "While competitors focuses on speed and low prices, our Royal Treatment approach prioritizes quality, consistency, and personalized service. Our DBS-checked cleaners spend the time needed to properly clean your home, not rush through it."
     },
     {
       question: "Do you offer fortnightly cleaning as well as weekly?",

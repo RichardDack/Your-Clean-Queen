@@ -7,7 +7,7 @@ import BlogCard from '../../components/BlogCard'
 
 export const metadata: Metadata = enhancedSEO.generateBlogListingMeta('Dorchester', {
   customTitle: 'Expert Cleaning Tips & Guides | Your Clean Queen Blog | Dorchester',
-  customDescription: 'Professional cleaning tips and expert insights from Dorchester\'s premium cleaning service. Royal Treatment expertise that Lucy\'s Cleaning and Maid2Clean don\'t share. Comprehensive guides for superior home care.',
+  customDescription: 'Professional cleaning tips and expert insights from Dorchester\'s premium cleaning service. Royal Treatment expertise that Competitors don\'t share. Comprehensive guides for superior home care.',
   canonical: 'https://yourcleanqueen.co.uk/blog'
 })
 

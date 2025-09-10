@@ -50,8 +50,8 @@ const TITLE_TEMPLATES = {
 // Compelling description templates with premium positioning
 const DESCRIPTION_TEMPLATES = {
   homepage: {
-    premium: 'Professional cleaners in {location} providing Royal Treatment standards. {trust_signals} with {experience}. Superior quality vs budget competitors like Maid2Clean\'s £17.48/hour service.',
-    authority: 'Your Clean Queen delivers expert house cleaning across {location} and West Dorset. {trust_signals} providing premium service that Lucy\'s Cleaning and Maid2Clean cannot match.',
+    premium: 'Professional cleaners in {location} providing Royal Treatment standards. {trust_signals} with {experience}. Superior quality vs budget competitors hourly service.',
+    authority: 'Your Clean Queen delivers expert house cleaning across {location} and West Dorset. {trust_signals} providing premium service that competitors cannot match.',
     competitive: 'Premium cleaning services in {location} with Royal Treatment approach. {trust_signals}. Quality-focused alternative to budget competitors. Free quote available.'
   },
   service: {
@@ -66,7 +66,7 @@ const DESCRIPTION_TEMPLATES = {
   },
   blog: {
     authority: 'Expert cleaning tips and professional insights from {location}\'s premium cleaning service. Royal Treatment expertise that competitors don\'t share.',
-    competitive: 'Professional cleaning guides and tips from Your Clean Queen. Expert insights Lucy\'s Cleaning and Maid2Clean don\'t provide. Quality-focused advice.'
+    competitive: 'Professional cleaning guides and tips from Your Clean Queen. Expert insights competitors provide. Quality-focused advice.'
   },
   blog_post: {
     authority: '{excerpt} Expert insights from {location}\'s professional cleaning specialists. Royal Treatment standards and quality advice.',
@@ -294,12 +294,12 @@ export function generateCompetitiveMetadata(options: CompetitiveMetaOptions & {
 
 // Competitive analysis helpers
 export const COMPETITOR_WEAKNESSES = {
-  'lucys-cleaning': {
-    metaTitle: 'Lucy\'s Cleaning Services Dorchester', // Boring, no emotional triggers
+  'competitor a': {
+    metaTitle: 'competitor a Dorchester', // Boring, no emotional triggers
     weaknesses: ['Generic title', 'No trust signals', 'No premium positioning', 'No emotional appeal'],
     opportunities: ['Add Royal Treatment positioning', 'Include trust signals', 'Use emotional triggers']
   },
-  'maid2clean': {
+  'competitor b': {
     metaTitle: 'Get an affordable domestic cleaner... £17.48 per hour', // Price-focused, budget positioning
     weaknesses: ['Budget positioning', 'Price race-to-bottom', 'Corporate feel', 'No local expertise'],
     opportunities: ['Premium quality positioning', 'Local authority', 'Professional expertise', 'Trust signals']
@@ -322,7 +322,7 @@ export function generateCompetitorSuperiorMeta(
   const metadata = generateCompetitiveMetadata(enhancedOptions);
 
   // Add competitor-specific enhancements
-  if (competitorType === 'maid2clean') {
+  if (competitorType === 'competitor b') {
     // Counter their budget positioning with quality focus
     if (metadata.description && typeof metadata.description === 'string') {
       metadata.description = metadata.description.replace(
@@ -335,7 +335,7 @@ export function generateCompetitorSuperiorMeta(
     }
   }
 
-  if (competitorType === 'lucys-cleaning') {
+  if (competitorType === 'competitor a') {
     // Counter their generic approach with specific expertise
     if (metadata.title && typeof metadata.title === 'string') {
       metadata.title = metadata.title.replace(

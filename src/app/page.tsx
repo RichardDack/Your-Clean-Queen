@@ -15,7 +15,7 @@ import { richSnippetsSchema } from './lib/rich-snippets-schema'
 
 export const metadata: Metadata = {
   title: "Professional Cleaners Dorchester | Royal Treatment | Superior to Budget Services | Your Clean Queen",
-  description: "Professional cleaners in Dorchester and West Dorset with Royal Treatment standards. Superior quality vs budget competitors like Maid2Clean's £17.48/hour service. Fully insured & DBS checked with 5+ years experience.",
+  description: "Professional cleaners in Dorchester and West Dorset with Royal Treatment standards. Superior quality vs budget competitors hourly service. Fully insured & DBS checked with 5+ years experience.",
   keywords: [
     "cleaners Dorchester",
     "cleaners West Dorset",

@@ -13,7 +13,7 @@ export interface EnhancedSEOOptions {
   excerpt?: string;
   canonical?: string;
   premiumPositioning?: boolean;
-  competitorFocus?: 'lucys-cleaning' | 'maid2clean' | 'both';
+  competitorFocus?: 'competitor a' | 'competitor b' | 'both';
 }
 
 // Service-specific meta optimization
@@ -125,7 +125,7 @@ export function generateHomepageMeta(
   if (options.competitorFocus) {
     if (options.competitorFocus === 'both') {
       // For 'both', default to maid2clean as primary competitor
-      return competitiveMeta.generateSuperiorMeta('maid2clean', metaOptions);
+      return competitiveMeta.generateSuperiorMeta('competitor b', metaOptions);
     }
     return competitiveMeta.generateSuperiorMeta(options.competitorFocus, metaOptions);
   }
@@ -204,7 +204,7 @@ export function generateServiceLandingMeta(
     
   // Custom description highlighting competitive advantage
   const customDescription = competitorGap
-    ? `Professional ${service.toLowerCase()} in ${location} - the ONLY comprehensive service available. Royal Treatment standards with full insurance & DBS checks. Lucy's Cleaning & Maid2Clean don't offer this expertise.`
+    ? `Professional ${service.toLowerCase()} in ${location} - the ONLY comprehensive service available. Royal Treatment standards with full insurance & DBS checks. Competitors don't offer this expertise.`
     : undefined;
   
   return competitiveMeta.generateMetadata({
@@ -217,7 +217,7 @@ export function generateServiceLandingMeta(
 // Generate meta for pages targeting specific competitor weaknesses
 export function generateCompetitorTargetedMeta(
   pageType: 'service' | 'location' | 'homepage',
-  targetCompetitor: 'lucys-cleaning' | 'maid2clean',
+  targetCompetitor: 'competitor a' | 'competitor b',
   service?: string,
   location?: string
 ): Metadata {
@@ -233,7 +233,7 @@ export function generateCompetitorTargetedMeta(
   const metadata = competitiveMeta.generateSuperiorMeta(targetCompetitor, metaOptions);
   
   // Add specific competitive advantages based on competitor
-  if (targetCompetitor === 'maid2clean') {
+  if (targetCompetitor === 'competitor b') {
     // Target their budget positioning with quality focus
     metadata.keywords = [
       ...(metadata.keywords || []),
@@ -244,7 +244,7 @@ export function generateCompetitorTargetedMeta(
     ];
   }
   
-  if (targetCompetitor === 'lucys-cleaning') {
+  if (targetCompetitor === 'competitor a') {
     // Target their generic approach with expertise
     metadata.keywords = [
       ...(metadata.keywords || []),
