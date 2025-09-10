@@ -8,10 +8,10 @@ export const expertContentExamples = {
   // Complete Guide to End of Tenancy Cleaning in Dorchester
   endOfTenancyGuide: blogMeta.generateBlogPostMeta({
     title: "Complete Guide to End of Tenancy Cleaning in Dorchester",
-    excerpt: "Everything you need to know about end of tenancy cleaning in Dorchester. Professional tips to get your deposit back guaranteed.",
+    excerpt: "Everything you need to know about end of tenancy cleaning in Dorchester. Professional tips to get Sparkling results.",
     targetKeywords: [
       "end of tenancy cleaning dorchester",
-      "deposit back guarantee",
+      "Sparkling results",
       "move out cleaning",
       "tenancy cleaning guide",
       "professional end of tenancy"

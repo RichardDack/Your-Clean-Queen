@@ -106,7 +106,7 @@ Test each page type:
 
 **Long-tail Keywords:**
 - "professional cleaners Dorchester vs Maid2Clean"
-- "end of tenancy cleaning deposit back guarantee"
+- "end of tenancy cleaning Sparkling results"
 - "Royal Treatment cleaning service"
 
 ### **Local SEO Metrics**

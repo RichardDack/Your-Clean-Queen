@@ -40,12 +40,12 @@ export default function MyPage() {
 ```tsx
 const serviceDetails = {
   name: "End of Tenancy Cleaning Dorchester",
-  description: "Professional end of tenancy cleaning with deposit back guarantee...",
+  description: "Professional end of tenancy cleaning with Sparkling results...",
   serviceType: "End of Tenancy Cleaning",
   areaServed: ["Dorchester", "Poundbury"],
   priceRange: "££",
   features: [
-    "Deposit back guarantee",
+    "Sparkling results",
     "DBS checked cleaners",
     "Fully insured service"
   ]

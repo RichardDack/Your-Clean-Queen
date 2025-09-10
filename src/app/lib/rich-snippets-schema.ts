@@ -251,7 +251,7 @@ export function generateLocalBusinessSchema(businessData: LocalBusinessData): ob
           "itemOffered": {
             "@type": "Service", 
             "name": "End of Tenancy Cleaning",
-            "description": "Professional end of tenancy cleaning with deposit back guarantee"
+            "description": "Professional end of tenancy cleaning with Sparkling results"
           }
         }
       ]
@@ -339,7 +339,7 @@ export const SERVICE_FAQS = {
     },
     {
       question: "Do you guarantee deposit back for end of tenancy cleaning?",
-      answer: "Yes, we offer a deposit back guarantee for our end of tenancy cleaning services in Dorchester. If your landlord is not satisfied with our cleaning, we will return to re-clean at no extra cost."
+      answer: "Yes, we offer a Sparkling results for our end of tenancy cleaning services in Dorchester. If your landlord is not satisfied with our cleaning, we will return to re-clean at no extra cost."
     },
     {
       question: "How much does end of tenancy cleaning cost in Dorchester?",

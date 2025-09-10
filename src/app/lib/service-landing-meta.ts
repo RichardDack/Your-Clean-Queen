@@ -18,11 +18,11 @@ const SERVICE_META_TEMPLATES = {
     gapOpportunity: true, // Competitors have ZERO content
     monthlySearches: 13,
     competitorContent: false,
-    titleTemplate: 'End of Tenancy Cleaning {location} | Deposit Back Guarantee | Royal Treatment',
+    titleTemplate: 'End of Tenancy Cleaning {location} | Sparkling results | Royal Treatment',
     descriptionTemplate: 'Professional end of tenancy cleaning in {location} with deposit-back guarantee. ONLY comprehensive service available - Competitors don\'t offer this expertise. Fully insured & DBS checked.',
     keywords: [
       'end of tenancy cleaning',
-      'deposit back guarantee',
+      'Sparkling results',
       'move out cleaning',
       'tenancy cleaning service',
       'professional end of tenancy'

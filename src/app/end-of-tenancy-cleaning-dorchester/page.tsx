@@ -8,11 +8,11 @@ import SchemaMarkup from '../../components/SchemaMarkup'
 import { richSnippetsSchema } from '../lib/rich-snippets-schema'
 
 export const metadata: Metadata = {
-  title: "End of Tenancy Cleaning Dorchester | Deposit Back Guarantee | Royal Treatment | Your Clean Queen",
-  description: "Professional end of tenancy cleaning in Dorchester with deposit back guarantee. Expert cleaners following strict landlord checklists. Superior service vs budget competitors like Maid2Clean's £17.48/hour.",
+  title: "End of Tenancy Cleaning Dorchester | Sparkling results | Royal Treatment | Your Clean Queen",
+  description: "Professional end of tenancy cleaning in Dorchester with Sparkling results. Expert cleaners following strict landlord checklists. Superior service vs budget competitors like Maid2Clean's £17.48/hour.",
   keywords: [
     "end of tenancy cleaning dorchester",
-    "deposit back guarantee dorchester",
+    "Sparkling results dorchester",
     "professional end of tenancy cleaners",
     "landlord checklist cleaning",
     "move out cleaning dorchester",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     "professional move out cleaners"
   ],
   openGraph: {
-    title: "End of Tenancy Cleaning Dorchester | Deposit Back Guarantee | Your Clean Queen",
-    description: "Professional end of tenancy cleaning in Dorchester with deposit back guarantee. Expert cleaners following strict landlord checklists.",
+    title: "End of Tenancy Cleaning Dorchester | Sparkling results | Your Clean Queen",
+    description: "Professional end of tenancy cleaning in Dorchester with Sparkling results. Expert cleaners following strict landlord checklists.",
   },
 }
 
@@ -30,13 +30,13 @@ export default function EndOfTenancyCleaningDorchester() {
   // Enhanced service details for rich snippets
   const serviceDetails = {
     name: "End of Tenancy Cleaning Dorchester",
-    description: "Professional end of tenancy cleaning services in Dorchester with deposit back guarantee. Expert cleaners following strict landlord checklists to ensure full deposit return. Superior Royal Treatment quality vs budget competitors.",
+    description: "Professional end of tenancy cleaning services in Dorchester with Sparkling results. Expert cleaners following strict landlord checklists to ensure full deposit return. Superior Royal Treatment quality vs budget competitors.",
     serviceType: "End of Tenancy Cleaning",
     areaServed: ["Dorchester", "Poundbury", "Charminster", "Winterbourne Abbas"],
     priceRange: "££",
     duration: "PT4H-PT8H",
     features: [
-      "Deposit back guarantee",
+      "Sparkling results",
       "Complete landlord checklist compliance", 
       "Inside oven and appliance cleaning",
       "Professional carpet cleaning available",
@@ -52,7 +52,7 @@ export default function EndOfTenancyCleaningDorchester() {
     ...richSnippetsSchema.SERVICE_FAQS.endOfTenancy,
     {
       question: "Why choose Your Clean Queen over budget competitors for end of tenancy cleaning?",
-      answer: "Unlike budget services like Maid2Clean's £17.48/hour basic cleaning, our Royal Treatment approach includes comprehensive landlord checklist compliance, deposit back guarantee, and professional-grade equipment. We focus on quality over speed to ensure your deposit is protected."
+      answer: "Unlike budget services like Maid2Clean's £17.48/hour basic cleaning, our Royal Treatment approach includes comprehensive landlord checklist compliance, Sparkling results, and professional-grade equipment. We focus on quality over speed to ensure your deposit is protected."
     },
     {
       question: "Do you clean inside appliances for end of tenancy?",
@@ -116,7 +116,7 @@ export default function EndOfTenancyCleaningDorchester() {
               <span className="block text-accent-cream mt-2">Dorchester</span>
             </h1>
             <p className="text-lg md:text-xl text-white/95 leading-relaxed mb-8 max-w-2xl">
-              Professional end of tenancy cleaning in Dorchester with deposit back guarantee. 
+              Professional end of tenancy cleaning in Dorchester with Sparkling results. 
               Expert cleaners following strict landlord checklists - superior quality vs budget competitors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -153,7 +153,7 @@ export default function EndOfTenancyCleaningDorchester() {
               
               <div className="space-y-4 mb-8">
                 {[
-                  "Deposit back guarantee - we stand behind our work",
+                  "Sparkling results - we stand behind our work",
                   "Complete landlord checklist compliance",
                   "Inside oven, fridge, and all appliances cleaned",
                   "Professional carpet and upholstery cleaning available",
@@ -283,7 +283,7 @@ export default function EndOfTenancyCleaningDorchester() {
               <ul className="space-y-2">
                 {[
                   "Basic surface cleaning only",
-                  "No deposit back guarantee",
+                  "No Sparkling results",
                   "Generic corporate approach",
                   "Limited appliance cleaning",
                   "No landlord checklist compliance",
@@ -306,7 +306,7 @@ export default function EndOfTenancyCleaningDorchester() {
               <ul className="space-y-2">
                 {[
                   "Comprehensive deep cleaning service",
-                  "Deposit back guarantee included",
+                  "Sparkling results included",
                   "Personal, professional approach",
                   "Complete appliance deep cleaning",
                   "Strict landlord checklist compliance",

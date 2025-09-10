@@ -144,7 +144,7 @@ export default function Home() {
           "@type": "Service",
           "position": 3,
           "name": "End of Tenancy Cleaning",
-          "description": "Professional end of tenancy cleaning with deposit back guarantee",
+          "description": "Professional end of tenancy cleaning with Sparkling results",
           "url": "https://yourcleanqueen.co.uk/end-of-tenancy-cleaning-dorchester"
         }
       ]
