@@ -153,53 +153,6 @@ const enhancedStructuredData = {
       "priceRange": "££",
       "paymentAccepted": ["Cash", "Bank Transfer", "Card"],
       "currenciesAccepted": "GBP",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "10",
-        "bestRating": "5"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "House Cleaning Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Regular House Cleaning",
-              "description": "Weekly and fortnightly house cleaning services for homes in Dorchester and West Dorset",
-              "serviceType": "House Cleaning"
-            }
-          },
-          {
-            "@type": "Offer", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Deep Cleaning Service",
-              "description": "Comprehensive deep cleaning for homes in Dorchester and West Dorset",
-              "serviceType": "Deep Cleaning"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "End of Tenancy Cleaning",
-              "description": "Professional end of tenancy cleaning with deposit-back guarantee",
-              "serviceType": "End of Tenancy Cleaning"
-            }
-          }
-        ]
-      },
-      "additionalType": "https://schema.org/HouseCleaner",
-      "knowsAbout": [
-        "House Cleaning",
-        "Domestic Cleaning", 
-        "Residential Cleaning",
-        "Home Cleaning",
-        "Professional Cleaning"
-      ],
       "review": [
         {
           "@type": "Review",
@@ -243,7 +196,50 @@ const enhancedStructuredData = {
           "reviewBody": "Such a great find! This cleaner is the whole package: professional in their work, with a wonderfully welcoming and friendly personality. They transformed our house, leaving it absolutely spotless. A huge bonus for us was how dog-friendly they are.",
           "datePublished": "2025-06-12"
         }
-      ]
+      ],
+
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "House Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Regular House Cleaning",
+              "description": "Weekly and fortnightly house cleaning services for homes in Dorchester and West Dorset",
+              "serviceType": "House Cleaning"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Deep Cleaning Service",
+              "description": "Comprehensive deep cleaning for homes in Dorchester and West Dorset",
+              "serviceType": "Deep Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "End of Tenancy Cleaning",
+              "description": "Professional end of tenancy cleaning with deposit-back guarantee",
+              "serviceType": "End of Tenancy Cleaning"
+            }
+          }
+        ]
+      },
+      "additionalType": "https://schema.org/HouseCleaner",
+      "knowsAbout": [
+        "House Cleaning",
+        "Domestic Cleaning", 
+        "Residential Cleaning",
+        "Home Cleaning",
+        "Professional Cleaning"
+      ],
+
     },
     {
       "@type": "Organization",
@@ -284,44 +280,7 @@ const enhancedStructuredData = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you have professional cleaners in Dorchester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Your Clean Queen provides professional house cleaners across Dorchester and West Dorset. All our cleaners are fully trained, DBS checked, and committed to delivering excellent residential cleaning."
-      }
-    },
-    {
-      "@type": "Question", 
-      "name": "Do you cover West Dorset for cleaning services?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide professional cleaning services throughout West Dorset including Dorchester, Weymouth, Poundbury and surrounding areas within a 15-mile radius."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much do cleaners cost in Dorchester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our cleaning prices are competitive and transparent. Contact us for a free quote - we tailor our services to your specific needs and home size."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are your cleaners insured and DBS checked?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, all Your Clean Queen cleaners are fully insured and DBS checked for your complete peace of mind. We are a professional, trustworthy cleaning company."
-      }
-    }
-  ]
-};
+
 
 export default function RootLayout({
   children,
@@ -338,12 +297,7 @@ export default function RootLayout({
           }}
         />
         
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema)
-          }}
-        />
+
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

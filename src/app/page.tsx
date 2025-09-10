@@ -78,30 +78,8 @@ export default function Home() {
     ]
   };
 
-  // Homepage reviews showcasing quality
-  const homepageReviews = [
-    {
-      rating: 5,
-      reviewText: "Exceptional service from Your Clean Queen! The Royal Treatment approach really shows - attention to detail is outstanding. Much better than the budget cleaners we used before.",
-      author: "Sarah M.",
-      datePublished: "2024-01-15",
-      location: "Dorchester"
-    },
-    {
-      rating: 5,
-      reviewText: "Professional, reliable, and thorough. The team understands local properties perfectly and always leaves our home spotless. Highly recommend over other cleaning companies!",
-      author: "James P.",
-      datePublished: "2024-01-10",
-      location: "Poundbury"
-    },
-    {
-      rating: 5,
-      reviewText: "Quality service that's worth every penny. The difference between Your Clean Queen and budget competitors is night and day. Royal Treatment indeed!",
-      author: "Michael R.",
-      datePublished: "2023-12-28",
-      location: "Weymouth"
-    }
-  ];
+  // Homepage reviews are now in the global schema in layout.tsx to avoid duplication
+  // Individual service pages can still have their own page-specific reviews
 
   // Custom schemas for homepage
   const customSchemas = [
@@ -156,7 +134,6 @@ export default function Home() {
       <SchemaMarkup
         service={homepageService}
         faqs={homepageFAQs}
-        reviews={homepageReviews}
         localBusiness={richSnippetsSchema.DEFAULT_BUSINESS_DATA}
         includeOrganization={true}
         customSchemas={customSchemas}

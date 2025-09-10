@@ -52,14 +52,59 @@ export default function SchemaMarkup({
     schemas.push(richSnippetsSchema.generateServiceSchema(service));
   }
   
-  // Add Review Schema
-  if (reviews && reviews.length > 0) {
-    schemas.push(richSnippetsSchema.generateReviewSchema(reviews));
-  }
-  
-  // Add Local Business Schema
+  // Handle Local Business and Reviews intelligently
   if (localBusiness) {
-    schemas.push(richSnippetsSchema.generateLocalBusinessSchema(localBusiness));
+    if (reviews && reviews.length > 0) {
+      // Generate enhanced local business schema with reviews integrated
+      const localBusinessSchema = richSnippetsSchema.generateLocalBusinessSchema(localBusiness);
+      const aggregateRating = {
+        "@type": "AggregateRating",
+        "ratingValue": (reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length).toFixed(1),
+        "reviewCount": reviews.length,
+        "bestRating": 5,
+        "worstRating": 1
+      };
+      
+      const enhancedLocalBusiness = {
+        ...localBusinessSchema,
+        "@id": `${localBusiness.website}/#page-business`, // Different ID to avoid conflicts with global schema
+        aggregateRating,
+        review: reviews.map(review => ({
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": review.rating,
+            "bestRating": 5,
+            "worstRating": 1
+          },
+          "reviewBody": review.reviewText,
+          "author": {
+            "@type": "Person",
+            "name": review.author
+          },
+          "datePublished": review.datePublished,
+          ...(review.location && {
+            "locationCreated": {
+              "@type": "Place",
+              "name": review.location
+            }
+          })
+        }))
+      };
+      
+      schemas.push(enhancedLocalBusiness);
+    } else {
+      // Add Local Business Schema without reviews, but use different ID to avoid global conflicts
+      const localBusinessSchema = richSnippetsSchema.generateLocalBusinessSchema(localBusiness);
+      const pageLocalBusiness = {
+        ...localBusinessSchema,
+        "@id": `${localBusiness.website}/#page-business`
+      };
+      schemas.push(pageLocalBusiness);
+    }
+  } else if (reviews && reviews.length > 0) {
+    // Only reviews, no local business - use standalone review schema
+    schemas.push(richSnippetsSchema.generateReviewSchema(reviews));
   }
   
   // Add Breadcrumb Schema
