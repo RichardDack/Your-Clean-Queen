@@ -9,7 +9,7 @@ import { richSnippetsSchema } from '../lib/rich-snippets-schema'
 
 export const metadata: Metadata = {
   title: "End of Tenancy Cleaning Dorchester | Sparkling results | Royal Treatment | Your Clean Queen",
-  description: "Professional end of tenancy cleaning in Dorchester with Sparkling results. Expert cleaners following strict landlord checklists. Superior service vs budget competitors like Maid2Clean's £17.48/hour.",
+  description: "Professional end of tenancy cleaning in Dorchester with Sparkling results. Expert cleaners following strict landlord checklists. Superior service vs budget competitors.",
   keywords: [
     "end of tenancy cleaning dorchester",
     "Sparkling results dorchester",
@@ -52,7 +52,7 @@ export default function EndOfTenancyCleaningDorchester() {
     ...richSnippetsSchema.SERVICE_FAQS.endOfTenancy,
     {
       question: "Why choose Your Clean Queen over budget competitors for end of tenancy cleaning?",
-      answer: "Unlike budget services like Maid2Clean's £17.48/hour basic cleaning, our Royal Treatment approach includes comprehensive landlord checklist compliance, Sparkling results, and professional-grade equipment. We focus on quality over speed to ensure your deposit is protected."
+      answer: "Unlike budget services £17.48/hour basic cleaning, our Royal Treatment approach includes comprehensive landlord checklist compliance, Sparkling results, and professional-grade equipment. We focus on quality over speed to ensure your deposit is protected."
     },
     {
       question: "Do you clean inside appliances for end of tenancy?",
