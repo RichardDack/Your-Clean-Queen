@@ -54,9 +54,9 @@ export default function EndOfTenancyCleaningPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md border-2 border-black">
                 <div className="text-vibrant-green text-4xl mb-4">🏠</div>
-                <h3 className="text-xl font-semibold mb-3">Deposit-Back Guarantee</h3>
+                <h3 className="text-xl font-semibold mb-3">Landlord-Ready Standards</h3>
                 <p className="text-gray-600">
-                  Professional cleaning that meets landlord standards. Get your full deposit back or we&apos;ll return to re-clean for free.
+                  Meticulous deep cleaning using specialized checklists. We guarantee our cleaning meets the highest professional standards required for property handover.
                 </p>
               </div>
 
