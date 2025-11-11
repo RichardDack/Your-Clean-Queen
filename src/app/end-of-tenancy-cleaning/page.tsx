@@ -24,7 +24,7 @@ export default function EndOfTenancyCleaningPage() {
               End of Tenancy Cleaning Dorchester
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-              Professional End of Tenancy Cleaning with Deposit-Back Guarantee
+              Professional End of Tenancy Cleaning with Landlord-Ready Standards
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block border-2 border-black">
               <p className="text-lg font-semibold">
@@ -150,7 +150,7 @@ export default function EndOfTenancyCleaningPage() {
                 <h3 className="text-xl font-semibold mb-3">Your Clean Queen</h3>
                 <ul className="text-left space-y-2">
                   <li>✅ Comprehensive end of tenancy service</li>
-                  <li>✅ Deposit-back guarantee</li>
+                  <li>✅ Landlord-Ready Standards</li>
                   <li>✅ 50-point professional checklist</li>
                   <li>✅ Royal Treatment standards</li>
                   <li>✅ 5+ years experience</li>

@@ -21,7 +21,7 @@ export default function Services() {
       title: "End of Tenancy Cleaning",
       description: "Professional end of tenancy cleaners to help you get your deposit back. Our experienced cleaners follow strict checklists to ensure your property meets landlord standards.",
       image: "/images/oven.jpg",
-      features: ["Deposit-back guarantee", "Complete property checklist", "Inside oven & appliances", "Professional carpet cleaning available"],
+      features: ["Landlord-Ready Standards", "Complete property checklist", "Inside oven & appliances", "Professional carpet cleaning available"],
       href: "/end-of-tenancy-cleaning-dorchester"
     }
   ]

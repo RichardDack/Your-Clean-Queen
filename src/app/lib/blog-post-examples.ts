@@ -183,7 +183,7 @@ export const serviceSpecificExamples = {
   // End of Tenancy Cleaning (13 monthly searches, zero competitor content)
   endOfTenancyService: blogMeta.generateServiceBlogMeta(
     "End of Tenancy Cleaning Dorchester: Complete Service Guide",
-    "Professional end of tenancy cleaning in Dorchester with deposit-back guarantee. The only comprehensive service available.",
+    "Professional end of tenancy cleaning in Dorchester with Landlord-Ready Standards. The only comprehensive service available.",
     "End of Tenancy Cleaning",
     "Dorchester",
     false // No competitor content

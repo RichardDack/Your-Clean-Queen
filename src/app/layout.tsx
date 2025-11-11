@@ -225,7 +225,7 @@ const enhancedStructuredData = {
             "itemOffered": {
               "@type": "Service", 
               "name": "End of Tenancy Cleaning",
-              "description": "Professional end of tenancy cleaning with deposit-back guarantee",
+              "description": "Professional end of tenancy cleaning with Landlord-Ready Standards",
               "serviceType": "End of Tenancy Cleaning"
             }
           }
